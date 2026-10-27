@@ -1,0 +1,44 @@
+# Make one Short on GitHub's servers: Actions tab > "Make a Short" > Run workflow,
+# type a guide id like ac/lg/ch38, then download the "short-..." zip from the run.
+# This repo is public, so these minutes are free.
+name: Make a Short
+on:
+  workflow_dispatch:
+    inputs:
+      guide:
+        description: Guide id, e.g. ac/lg/ch38
+        required: true
+      theme:
+        description: Look (blank = automatic)
+        required: false
+        type: choice
+        options: ['', device, cream, teal]
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npm ci && npx playwright install --with-deps chromium
+      - run: pip install edge-tts
+      - name: Render
+        run: |
+          node bin/make-short.js "${{ inputs.guide }}" --voice edge \
+            --guides-url https://faultdecode.com/data/guides.json \
+            ${{ inputs.theme && format('--theme {0}', inputs.theme) || '' }}
+      - name: Name the download
+        id: name
+        run: echo "slug=$(echo '${{ inputs.guide }}' | tr '/' '-' | tr 'A-Z' 'a-z')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: short-${{ steps.name.outputs.slug }}
+          path: |
+            out/*/short.mp4
+            out/*/*.txt
+            out/*/script.json
+          retention-days: 14
