@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// Usage: node bin/make-short.js ac/lg/ch38 [--voice edge|silent|dir] [--voice-dir path] [--theme device|cream|teal]
+// Usage: node bin/make-short.js ac/lg/ch38 [--voice edge|silent|dir] [--voice-dir path] [--theme device|cream|teal] [--no-music]
 //        [--guides <folder of guide JSON> | --guides-url <url>] [--out out]
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildScript } from '../src/script.js';
 import { buildMeta } from '../src/meta.js';
-import { renderFrames, themeFor, THEMES } from '../src/frames.js';
+import { themeFor, THEMES } from '../src/stage.js';
 import { makeVoice, speak, duration } from '../src/voice.js';
 import { renderVideo } from '../src/render.js';
 
@@ -47,9 +47,8 @@ if (mode === 'edge') script = buildScript(guide, (text) => duration(speak(text, 
 const theme = opt('theme', themeFor(script.seed));
 if (!THEMES[theme]) throw new Error(`unknown theme ${theme}`);
 console.log(`${id}: ${script.scenes.length} scenes, ${script.stepsShown}/${guide.hindi.steps.length} steps, theme ${theme}, voice ${mode}`);
-const frames = await renderFrames(script, theme, work);
 const audio = makeVoice(script, mode, work, opt('voice-dir'));
-const secs = renderVideo(frames, audio, work, join(out, 'short.mp4'));
+const secs = await renderVideo(script, theme, audio, work, join(out, 'short.mp4'), { music: !args.includes('--no-music') });
 
 const meta = buildMeta(guide, script);
 writeFileSync(join(out, 'title.txt'), meta.title + '\n');
