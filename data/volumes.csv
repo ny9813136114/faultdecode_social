@@ -1,0 +1,663 @@
+volume_sum,appliance,brand,code,max_kd,page_live,top_keyword
+4490,vfd,delta,vfd,10,False,delta vfd fault codes
+2020,washing-machine,samsung,4c,41,True,4c error in samsung washing machine
+1690,washing-machine,samsung,4e,36,False,samsung washing machine 4e error
+1690,washing-machine,lg,ue,31,True,lg washing machine ue error
+1550,washing-machine,lg,ie,36,True,lg washing machine ie error
+1370,washing-machine,lg,de,33,True,lg washing machine de error
+1210,washing-machine,lg,pe,27,True,pe error in lg washing machine
+1050,ac,voltas,e2,26,False,e2 error in voltas ac
+950,washing-machine,samsung,de,37,True,samsung washing machine de error
+880,ac,samsung,c4,28,False,c4 error in samsung ac
+810,washing-machine,lg,oe,34,True,lg washing machine oe error
+780,vfd,generic,vfd,7,False,vfd fault codes
+760,ac,lg,ch05,31,True,lg air conditioner error code ch 05
+710,washing-machine,bosch,e17,22,True,bosch washing machine e17 error
+690,washing-machine,lg,le,36,True,lg washing machine le error
+670,ac,generic,e6,27,False,e6 error in ac
+670,washing-machine,samsung,1e,24,True,1e error in samsung washing machine
+640,washing-machine,whirlpool,e1,27,False,e1 error in whirlpool washing machine
+640,washing-machine,samsung,dc,32,False,dc error in samsung washing machine
+610,ac,generic,e4,31,False,e4 error in ac
+590,ac,voltas,e5,26,False,e5 error in voltas ac
+590,washing-machine,whirlpool,pe,24,False,pe error in whirlpool washing machine
+590,washing-machine,samsung,5e,35,True,samsung washing machine 5e error
+580,ac,generic,e5,26,False,e5 error in ac
+490,ac,voltas,e6,26,False,voltas ac error code e6
+480,ac,generic,ec,26,False,ec error in ac
+480,ac,videocon,e6,26,False,e6 error in videocon ac
+480,washing-machine,lg,1e,36,False,1e error in lg washing machine
+460,ac,voltas,h6,26,False,h6 error in voltas ac
+450,induction,generic,e6,27,False,e6 error in induction
+440,ac,lg,ch10,26,True,lg ac error code ch 10
+440,induction,generic,e0,26,False,e0 error in induction
+430,ac,carrier,ec,,False,carrier ac error code ec
+420,washing-machine,lg,cl,30,True,lg washing machine cl error
+410,ac,samsung,e1,31,True,samsung ac error code e1
+410,washing-machine,generic,ue,27,False,ue error in washing machine
+410,ac,hitachi,red,25,False,hitachi ac red light blinking 7 times
+380,microwave,samsung,se,21,False,samsung microwave se error
+370,ac,samsung,e4,,False,samsung air conditioner error code e4
+370,washing-machine,whirlpool,de,23,False,de error in whirlpool washing machine
+370,vfd,abb,vfd,8,False,abb vfd fault codes
+360,ac,generic,f1,24,False,how to remove f1 error in ac
+350,ac,carrier,cl,,False,carrier ac cl error
+340,washing-machine,generic,ie,30,False,ie error in washing machine
+340,washing-machine,generic,4e,26,False,4e error in washing machine
+340,washing-machine,generic,de,29,False,de error in washing machine
+340,washing-machine,samsung,ue,37,True,samsung washing machine ue error
+330,ac,haier,f1,26,False,f1 error in haier ac
+320,ac,lloyd,e5,,False,e5 error in lloyd ac
+320,washing-machine,generic,e1,26,False,e1 error in washing machine
+310,ac,voltas,df,,False,how to fix df error in voltas ac
+310,ac,generic,e2,27,False,e2 error in ac
+310,ac,voltas,h3,,False,h3 error in voltas ac
+310,washing-machine,ifb,e1,26,True,e1 error in ifb washing machine
+310,washing-machine,lg,fe,30,True,lg washing machine fe error
+300,ac,lg,ch38,,True,lg air conditioner error code ch 38
+300,vfd,schneider,vfd,14,False,schneider electric vfd fault codes
+290,ac,voltas,e1,,False,e1 error in voltas split ac
+290,ac,generic,f6,,False,f6 error in ac
+280,ac,lg,ch,31,False,ch error in lg ac
+280,washing-machine,ifb,e4,26,False,e4 error in ifb washing machine
+270,induction,generic,e2,27,False,e2 error in induction
+270,ac,generic,f2,26,False,how to remove f2 error in ac
+260,washing-machine,samsung,5d,25,False,5d error in samsung washing machine
+260,ac,whirlpool,e4,,False,whirlpool ac e4 error
+250,ac,lg,ch23,23,False,ch 23 error in lg ac
+250,ac,samsung,e3,,False,samsung ac e3 error code
+250,ac,voltas,e3,26,False,tata voltas ac e3 error
+250,washing-machine,bosch,17,17,False,bosch washing machine error 17
+240,ac,generic,h6,26,False,h6 error in ac
+240,ac,lloyd,p3,26,False,lloyd ac p3 error codes
+240,washing-machine,samsung,se,31,False,samsung washing machine se error
+230,ac,generic,e1,29,False,e1 error in ac
+220,ac,bluestar,h6,25,False,blue star ac h6 error code
+220,inverter-ups,luminous,cbl,26,False,cbl error in luminous inverter
+210,washing-machine,ifb,lo,,True,ifb top load washing machine error code lo
+210,washing-machine,whirlpool,fe,20,False,fe error in whirlpool washing machine
+200,ac,voltas,ec,,False,ec error in voltas ac
+200,washing-machine,samsung,ub,31,False,ub error in samsung washing machine
+200,ac,generic,h3,25,False,how to solve h3 error in ac
+190,microwave,samsung,5e,,False,samsung microwave 5e error
+190,ac,samsung,cf,,False,cf error in samsung ac
+190,ac,voltas,p3,26,False,p3 error in voltas ac
+190,washing-machine,generic,pe,26,False,pe error in washing machine
+190,washing-machine,lg,ae,,True,ae error lg washing machine
+180,ac,carrier,nf,,False,nf code in carrier ac
+180,induction,philips,e9,,False,e9 error philips induction cooker
+180,washing-machine,generic,4c,31,False,4c error in washing machine
+180,washing-machine,generic,e2,,False,e2 error washing machine
+170,ac,bluestar,h3,,False,blue star ac h3 error code
+170,ac,bluestar,e6,26,False,e6 error in bluestar ac
+170,ac,lloyd,ec,,False,lloyd ac ec error code
+170,washing-machine,ifb,h260,25,True,h260 error in ifb washing machine
+170,washing-machine,ifb,l175,26,True,l175 error in ifb washing machine
+170,washing-machine,whirlpool,ub,26,False,ub error in whirlpool washing machine
+170,washing-machine,samsung,3e,31,True,samsung washing machine 3e error
+170,washing-machine,samsung,le,,True,le error in samsung washing machine
+170,washing-machine,videocon,pr,,False,pr error in videocon washing machine
+170,washing-machine,samsung,5c,,False,samsung washing machine error code 5c
+170,vfd,siemens,vfd,14,False,siemens vfd fault codes
+160,washing-machine,ifb,h1,,False,how to solve ac h1 error in ifb washing machine
+160,washing-machine,whirlpool,551,,False,error 551 whirlpool washing machine
+160,washing-machine,samsung,lc,,False,samsung washing machine lc error
+150,washing-machine,ifb,e9,,False,e9 error in ifb washing machine
+150,ac,generic,f4,,False,f4 error in ac
+150,ac,generic,p4,,False,p4 error code air conditioner
+150,washing-machine,samsung,oe,31,True,samsung washing machine oe error
+150,washing-machine,samsung,uc,,False,samsung washing machine uc error
+150,ac,generic,f3,26,False,f3 error in ac
+140,ac,hitachi,7,,False,hitachi ac 7 time blinking
+140,washing-machine,ifb,dp,,False,dp error in ifb washing machine
+140,ac,carrier,e1,,False,carrier inverter ac error code e1
+140,inverter-ups,luminous,1100,11,False,luminous inverter zelio 1100 error codes
+130,ac,samsung,e154,,True,samsung air conditioner error code e1 54
+130,ac,bluestar,e3,,False,blue star split ac error code e3
+130,ac,voltas,f1,,False,voltas ac error code f1
+130,washing-machine,ifb,hi,,True,ifb washing machine ac hi error
+130,ac,generic,e8,,False,e8 error in ac
+120,ac,lloyd,h3,,False,lloyd ac h3 error code
+120,washing-machine,ifb,e2,,False,e2 error in ifb washing machine
+120,induction,prestige,e3,,False,e3 error in prestige induction
+120,washing-machine,haier,e6,,False,e6 error in haier washing machine
+120,washing-machine,lg,e1,,False,e1 error in lg washing machine
+120,vfd,siemens,e18,,False,e18 error siemens washing machine
+120,ac,videocon,e4,,False,e4 error in split ac videocon
+110,ac,onida,f6,,False,onida ac f6 error
+110,ac,lg,co,,False,co error in lg ac
+110,ac,lloyd,e3,,False,lloyd ac error code e3
+110,ac,generic,p1,,False,p1 error code air conditioner
+110,ac,voltas,f6,,False,f6 error in voltas ac
+110,induction,generic,e9,,False,induction cooker e9 error solution
+110,washing-machine,whirlpool,360,,False,whirlpool 360 washing machine error codes ss1
+110,washing-machine,bosch,e18,,True,e18 error in bosch washing machine
+110,washing-machine,samsung,5ud,,False,5ud error in samsung washing machine
+110,washing-machine,generic,e4,,False,e4 error in washing machine
+110,washing-machine,samsung,sud,,True,samsung washing machine sud error
+110,ac,electrolux,e6,,False,e6 error in electrolux split ac
+110,ac,vguard,oh,,False,v guard ac stabilizer oh error
+100,ac,bluestar,e5,,False,e5 error in blue star ac
+100,ac,voltas,p4,,False,voltas inverter ac p4 error code
+100,ac,godrej,e6,,False,godrej ac error code e6
+100,induction,generic,e1,,False,e1 error in induction stove
+100,induction,generic,e8,,False,e8 error in induction cooker
+100,washing-machine,generic,dc,,False,dc error in washing machine
+100,washing-machine,samsung,e1,,False,e1 error in samsung washing machine
+100,washing-machine,samsung,le1,,False,le1 error in samsung washing machine
+90,ac,bluestar,e8,,False,blue star window ac error code e8
+90,ac,hitachi,e1,,False,e1 error in hitachi ac
+90,washing-machine,whirlpool,le,,False,whirlpool washing machine le error code
+90,ac,lloyd,hsn,,False,lloyd ac hsn code
+90,washing-machine,haier,e2,,False,haier washing machine e2 error
+90,washing-machine,lg,dl,,False,dl error in lg washing machine
+90,washing-machine,onida,e2,,False,e2 error in onida washing machine
+90,washing-machine,electrolux,e2,,False,electrolux washing machine error code e2
+90,washing-machine,samsung,h1,,False,samsung washing machine h1 error
+90,ac,whirlpool,e8,,False,whirlpool ac e8 error
+90,ac,carrier,e3,,False,carrier ac error code e3
+90,ac,generic,e3,,False,e3 error in air conditioner
+90,inverter-ups,luminous,btp,,False,btp error in luminous inverter
+80,ac,daikin,f3,,False,daikin ac error code f3
+80,ac,daikin,u4,,False,daikin ac error code u4
+80,ac,onida,f8,,False,f8 error in onida ac
+80,ac,lloyd,e6,,False,e6 error in lloyd ac
+80,ac,onida,h6,,False,onida split ac h6 error
+80,ac,haier,e7,,False,e 7 error in haier ac
+80,washing-machine,ifb,eap,,False,eap error in ifb washing machine
+80,induction,generic,e7,,False,e7 error in induction cooker
+80,washing-machine,samsung,0e,,False,0e error in samsung washing machine
+80,washing-machine,generic,e5,,False,e5 error code code washing machines
+80,washing-machine,godrej,e3,,False,godrej fuzzy logic washing machine e3 error
+80,washing-machine,haier,e1,,False,haier washing machine e1 error
+80,washing-machine,bosch,e16,,False,bosch washing machine e16 error
+80,vfd,siemens,e17,,False,e17 error in siemens washing machine
+80,ac,videocon,e5,,False,e5 error in videocon ac
+80,ac,carrier,e4,,False,e4 error in carrier ac
+70,ac,daikin,red,,False,daikin cassette ac red light blinking
+70,ac,lg,ch12,,False,lg air conditioner error code ch 12
+70,ac,lg,ch02,,False,ch 02 error in lg ac
+70,ac,samsung,e422,,False,e422 error in samsung ac
+70,ac,bluestar,ec,,False,blue star ac error code ec
+70,ac,bluestar,e2,,False,blue star ac error code e2
+70,ac,generic,red,,False,ac red light blinking
+70,ac,whirlpool,f6,,False,whirlpool inverter ac f6 error code
+70,washing-machine,ifb,e3,,False,ifb washing machine error code e3
+70,washing-machine,ifb,p10,,False,ifb washing machine error code p10
+70,induction,prestige,e0,,False,e0 error in prestige induction
+70,induction,pigeon,e6,,False,e6 error in pigeon induction stove
+70,induction,prestige,e2,,False,e2 error in prestige induction stove
+70,induction,prestige,e6,,False,e6 error in prestige induction cooktop
+70,ac,generic,f8,,False,f8 error in ac
+70,washing-machine,generic,le,,False,le error in washing machine
+70,washing-machine,electrolux,pr,,False,electrolux washing machine error code pr
+70,washing-machine,godrej,h9,,False,godrej washing machine h9 error
+70,washing-machine,haier,e3,,False,haier washing machine e3 error
+70,washing-machine,lg,de1,,False,lg washing machine de1 error
+70,washing-machine,lg,pf,,True,lg washing machine error code pf
+70,washing-machine,videocon,e1,,False,videocon washing machine error e1
+70,washing-machine,generic,5e,,False,5e error in washing machine
+70,washing-machine,bosch,e3,,False,bosch washing machine e3 error
+70,ac,whirlpool,ea,,False,ea error in whirlpool ac
+70,ac,midea,e8,,False,midea cassette ac error code e8
+70,ac,generic,p3,,False,p3 error in ac
+60,ac,samsung,c1,,False,c1 error in samsung ac
+60,ac,midea,ec,,False,midea ac ec error
+60,ac,voltas,f8,,False,f8 error in voltas ac
+60,ac,godrej,h6,,False,godrej ac h6 error code
+60,ac,godrej,h3,,False,godrej ac h3 error
+60,ac,generic,h1,,False,h1 error in ac stabilizer
+60,ac,lloyd,f6,,False,lloyd ac error code f6
+60,ac,voltas,e4,,False,voltas inverter ac e4 error
+60,washing-machine,ifb,p11,,False,ifb washing machine error code p11
+60,induction,generic,e3,,False,e3 error in induction stove
+60,washing-machine,haier,e4,,False,e4 error in haier washing machine
+60,washing-machine,samsung,oc,,False,oc error code samsung washing machine
+60,washing-machine,samsung,u6,,False,u6 error in samsung washing machine
+60,washing-machine,samsung,cl,,False,cl error in samsung washing machine
+60,washing-machine,electrolux,e3,,False,e3 error in electrolux washing machine
+60,washing-machine,samsung,e4,,False,e4 error in samsung washing machine
+60,washing-machine,generic,e6,,False,e6 error in washing machine
+60,washing-machine,samsung,fe,,False,fe error in samsung washing machine
+60,washing-machine,samsung,ie,,False,ie error code samsung washing machine
+60,washing-machine,samsung,sd,,False,samsung washing machine error sd
+60,vfd,mitsubishi,e700,,False,mitsubishi e700 vfd manual fault codes
+60,ac,ifb,e6,,False,e6 error in ifb ac
+60,ac,voltas,f3,,False,voltas inverter ac error code f3
+60,ac,carrier,f3,,False,carrier ductable ac error code f3
+50,ac,daikin,a5,,False,daikin ac error code a5
+50,ac,onida,f1,,False,onida ac error code f1
+50,ac,onida,e5,,False,onida ac error code e5
+50,ac,lg,h1,,False,h1 error in lg ac
+50,ac,samsung,e2,,False,e2 error in samsung ac
+50,ac,bluestar,f2,,False,blue star ac f2 error
+50,ac,bluestar,f1,,False,blue star ac f1 error
+50,ac,bluestar,e1,,False,blue star inverter ac error code e1
+50,ac,generic,sac,,False,sac code for repair and maintenance of air conditioner
+50,ac,godrej,e2,,False,e2 error in godrej ac
+50,ac,voltas,f2,,False,f2 error in voltas ac
+50,ac,videocon,f6,,False,f6 error in videocon split ac
+50,ac,godrej,e3,,False,godrej ac error code e3
+50,ac,hitachi,e9,,False,hitachi ac e9 error
+50,washing-machine,ifb,e5,,False,ifb washing machine error code e5
+50,washing-machine,ifb,ach,,False,ach error in ifb washing machine
+50,induction,prestige,e8,,False,e8 error in prestige induction
+50,induction,generic,e4,,False,induction cooker error code e4
+50,induction,generic,e5,,False,e5 error in induction cooker
+50,induction,prestige,e9,,False,prestige induction cooker error code e9
+50,ac,generic,f7,,False,f7 error air conditioner
+50,washing-machine,ifb,pr5,,False,pr5 error in ifb washing machine
+50,washing-machine,generic,pr,,False,pr error in washing machine
+50,washing-machine,ifb,ach1,,False,ach1 error in ifb washing machine
+50,washing-machine,samsung,be2,,False,be2 error in samsung washing machine
+50,washing-machine,bosch,18,,False,bosch washing machine error 18
+50,washing-machine,onida,e5,,False,e5 error in onida washing machine
+50,washing-machine,bosch,4,,False,bosch series 4 washing machine error 17
+50,washing-machine,lg,p5,,False,lg washing machine p5 error
+50,washing-machine,panasonic,u12,,False,panasonic washing machine u12 error
+50,vfd,danfoss,vfd,,False,danfoss vfd alarm 14 earth fault
+50,ac,whirlpool,e5,,False,whirlpool ac e5 error code
+50,ac,lloyd,e4,,False,e4 error in lloyd ac
+40,microwave,lg,10,,False,e 10 error in lg microwave oven
+40,ac,daikin,e0,,False,daikin cassette ac error code e0
+40,ac,daikin,00,,False,daikin ac error code 00
+40,ac,generic,aux,,False,aux inverter ac error code list
+40,ac,carrier,sa,,False,carrier window ac error codes sa
+40,ac,carrier,p4,,False,p4 error in inverter ac carrier
+40,ac,lg,c5,,False,lg split system air conditioner error code c5 or ch05
+40,ac,lg,lo,,False,lg ac lo error
+40,fridge,samsung,84,,False,samsung refrigerator error code 84 c
+40,ac,bluestar,sp,,False,blue star ductable ac error codes sp
+40,ac,voltas,88,,False,voltas ac error code 88
+40,ac,godrej,f6,,False,godrej ac f6 error
+40,washing-machine,haier,f7,,False,haier washing machine f7 error
+40,ac,videocon,e2,,False,e2 error in videocon ac
+40,ac,voltas,f5,,False,f5 error in voltas ac
+40,ac,godrej,e1,,False,godrej ac error code e1
+40,ac,haier,e2,,False,haier ac e2 error
+40,ac,lloyd,e1,,False,lloyd ac error code e1
+40,ac,generic,p0,,False,p0 error code air conditioner
+40,ac,voltas,e8,,False,voltas ac error code e8
+40,washing-machine,ifb,tp,,False,ifb washing machine error code tp
+40,induction,pigeon,e0,,False,pigeon induction cooktop e0 error
+40,induction,generic,aeg,,False,aeg induction hob error code e6
+40,induction,pigeon,e2,,False,pigeon induction e2 error
+40,induction,prestige,e7,,False,prestige induction e7 error
+40,washing-machine,whirlpool,6th,,False,whirlpool 6th sense washing machine error codes
+40,washing-machine,videocon,e4,,False,e4 error in videocon washing machine
+40,washing-machine,generic,e3,,False,e3 error in washing machine
+40,washing-machine,ifb,p02,,False,ifb washing machine p02 error
+40,washing-machine,samsung,ae,,False,ae error samsung washing machine
+40,washing-machine,bosch,e5,,False,bosch washing machine e5 error
+40,washing-machine,bosch,e21,,False,bosch washing machine error code e21
+40,washing-machine,generic,bpl,,False,bpl washing machine error code
+40,washing-machine,ifb,dl,,False,dl error in ifb washing machine
+40,washing-machine,marq,e01,,False,e01 error in marq washing machine
+40,washing-machine,videocon,e2,,False,e2 error in videocon washing machine
+40,vfd,siemens,e21,,False,e21 error code siemens washing machine
+40,washing-machine,videocon,e5,,False,e5 error in videocon washing machine
+40,vfd,siemens,f17,,False,f17 error siemens washing machine
+40,washing-machine,godrej,eon,,False,godrej eon washing machine e3 error
+40,washing-machine,ifb,tap,,False,ifb washing machine tap error
+40,washing-machine,generic,oe,,False,oe error washing machine
+40,washing-machine,samsung,pe,,False,pe error in samsung washing machine
+40,washing-machine,generic,se,,False,se error in washing machine
+40,washing-machine,whirlpool,ss1,,False,ss1 error in whirlpool washing machine
+40,ac,hitachi,4,,False,hitachi ac orange light blinking 4 times
+40,ac,ifb,e0,,False,e0 error in ifb air conditioner
+40,fridge,samsung,5e,,False,samsung refrigerator error code 5e
+30,microwave,panasonic,h97,,False,panasonic microwave error h97
+30,microwave,samsung,11,,False,samsung microwave error code e 11
+30,microwave,generic,se,,False,microwave se error
+30,ac,daikin,c9,,False,daikin ac error code c9
+30,ac,generic,ge,,False,ge air conditioner error codes
+30,ac,generic,ac890,,False,parker ac890 fault codes
+30,ac,onida,e6,,False,onida ac e6 error
+30,ac,generic,fo,,False,fo error in ac
+30,ac,carrier,pa,,False,carrier ac error code pa
+30,ac,carrier,e7,,False,e7 error code carrier ac
+30,ac,carrier,5a,,False,carrier window ac error code 5a
+30,ac,lg,ch5,,False,ch 5 error lg air conditioner
+30,ac,samsung,e122,,False,samsung ac error code e1 22
+30,ac,samsung,e101,,False,samsung air conditioner error code e101
+30,ac,samsung,ch,,True,samsung window ac ch error code
+30,ac,bluestar,pl,,False,pl error in bluestar ac
+30,ac,bluestar,e9,,False,blue star cassette ac e9 error code
+30,ac,bluestar,f4,,False,f4 error in bluestar ac
+30,ac,panasonic,h11,,False,panasonic ac error code h11
+30,ac,generic,tp,,False,tp link ac1200 power light blinking
+30,ac,lloyd,e2,,False,e2 error in lloyd ac
+30,ac,lloyd,f8,,False,f8 error in lloyd ac
+30,ac,voltas,h1,,False,h1 error in voltas ac
+30,ac,hitachi,07,,False,hitachi ductable ac error code 07
+30,ac,voltas,ir,,False,voltas ac remote ir code
+30,ac,voltas,es,,False,es error in voltas ac
+30,ac,godrej,f1,,False,f1 error in godrej ac
+30,ac,voltas,f7,,False,voltas split ac error code f7
+30,ac,whirlpool,e6,,False,whirlpool ac error code e6
+30,induction,prestige,e4,,False,e4 error in prestige induction stove
+30,induction,philips,e7,,False,philips induction cooker e7 error
+30,induction,prestige,e5,,False,prestige induction e5 error
+30,induction,prestige,pic,,False,prestige induction pic 20.0 e0 error
+30,ac,generic,df,,False,df error in ac
+30,washing-machine,lg,03,,False,03 error lg washing machine
+30,washing-machine,generic,e05,,False,e05 error washing machine
+30,washing-machine,videocon,3,,False,error 3 in videocon washing machine
+30,washing-machine,generic,fe,,False,fe error in washing machine
+30,washing-machine,haier,4,,False,haier washing machine error 4
+30,washing-machine,ifb,p03,,False,p03 error in ifb washing machine
+30,washing-machine,ifb,p08,,False,p08 error in ifb washing machine
+30,washing-machine,ifb,p12,,False,p12 error in ifb washing machine
+30,washing-machine,panasonic,u,,False,u error in panasonic washing machine
+30,washing-machine,generic,551,,False,washing machine repair error 551
+30,washing-machine,bosch,f17,,False,bosch washing machine error code f17
+30,washing-machine,bosch,16,,False,e 16 error bosch washing machine
+30,vfd,siemens,17,,False,e 17 error in siemens washing machine
+30,washing-machine,godrej,e1,,False,e1 error in godrej washing machine
+30,washing-machine,generic,i,,False,how do i fix e2 error on my washing machine
+30,washing-machine,lg,0e,,False,lg washing machine 0e error
+30,washing-machine,lg,e3,,False,lg washing machine error code e3
+30,washing-machine,lloyd,e3,,False,lloyd washing machine e3 error
+30,washing-machine,samsung,sc,,False,sc error in samsung washing machine
+30,vfd,siemens,iq300,,False,siemens iq300 washing machine error codes
+30,vfd,siemens,f21,,False,siemens washing machine error code f21
+30,washing-machine,lg,te,,True,te error in lg washing machine
+30,washing-machine,generic,5d,,False,washing machine 5d error
+30,washing-machine,generic,cl,,False,washing machine cl error
+30,vfd,mitsubishi,d700,,False,mitsubishi d700 vfd fault codes
+30,vfd,generic,dc,,False,causes of dc bus undervoltage fault in a vfd
+30,ac,lg,red,,False,lg cassette ac blinking red light
+30,washing-machine,lg,he,,False,lg dishwasher error code he
+30,washing-machine,lg,u3,,False,u3 error code lg washer
+30,ac,generic,e9,,False,e9 error in ac
+30,ac,ifb,e9,,False,ifb ac error code e9
+30,ac,generic,e0,,False,e0 error air conditioner
+30,ac,generic,e7,,False,e7 error air conditioner
+30,ac,whirlpool,f4,,False,whirlpool ac f4 error
+30,fridge,samsung,1e,,False,samsung refrigerator 1e error code
+30,fridge,whirlpool,pf,,False,whirlpool refrigerator error code pf
+30,inverter-ups,luminous,bt,,False,luminous inverter bt error
+30,geyser,aosmith,e5,,False,ao smith geyser e5 error
+30,ac,ifb,hi,,False,ac hi error ifb
+20,ac,daikin,e1,,False,daikin ac e1 error code
+20,ac,daikin,a1,,False,daikin ac error code a1
+20,ac,daikin,c4,,False,daikin ac error code c4
+20,ac,daikin,e6,,False,daikin ac error code e6
+20,ac,daikin,a3,,False,daikin cassette ac error code a3
+20,ac,daikin,5,,False,daikin inverter ac 1.5 ton error code
+20,ac,daikin,h0,,False,daikin inverter ac error code h0
+20,ac,daikin,u2,,False,daikin inverter ac error code u2
+20,ac,daikin,e8,,False,e8 error in daikin ac
+20,vfd,mitsubishi,e500,,False,mitsubishi e500 vfd fault codes
+20,ac,ogeneral,red,,False,o general ac red light blinking
+20,ac,midea,cl,,False,cl error in midea ac
+20,ac,onida,e3,,False,onida ac error code e3
+20,ac,onida,e9,,False,onida ac error code e9
+20,ac,onida,h3,,False,onida ac error code h3
+20,ac,onida,f3,,False,onida ac f3 error
+20,ac,generic,ac10,,False,parker ac10 fault codes
+20,ac,generic,bus,,False,spheros bus ac error codes
+20,ac,daikin,ir,,False,daikin ac ir codes
+20,ac,daikin,qr,,False,daikin ac qr code
+20,ac,lg,ch44,,False,ch 44 error in lg ac
+20,ac,lg,c0,,False,lg ac c0 error
+20,ac,lg,ch01,,False,lg ac error code ch 01
+20,ac,lg,ch04,,False,lg air conditioner error code ch 04
+20,ac,lg,ch35,,False,lg air conditioner error code ch 35
+20,ac,lg,ch21,,False,lg inverter ac error code ch 21
+20,ac,lg,v,,False,lg inverter v air conditioner error codes
+20,fridge,lg,cf,,False,lg refrigerator error code cf
+20,fridge,lg,er,,False,lg refrigerator error code er co
+20,ac,generic,og,,False,og inverter ac error code
+20,fridge,samsung,23,,False,23 c error code samsung refrigerator
+20,fridge,samsung,40,,False,samsung refrigerator error code 40 e
+20,fridge,samsung,41,,False,samsung refrigerator error code 41
+20,fridge,samsung,88,,False,samsung refrigerator error codes 88
+20,ac,bluestar,5,,False,blue star inverter ac 1.5 ton error codes
+20,ac,bluestar,hp,,False,hp lp error in blue star ac
+20,ac,panasonic,ir,,False,panasonic ac ir codes
+20,ac,voltas,cl,,False,voltas ac cl error code
+20,ac,voltas,ph,,False,voltas ac error code ph
+20,ac,voltas,ul,,False,voltas package ac ul error code
+20,ac,lloyd,df,,False,df error in lloyd ac
+20,ac,generic,ft,,False,ft error code air conditioner
+20,ac,godrej,e5,,False,godrej ac error code e5
+20,ac,godrej,f8,,False,godrej ac f8 error code
+20,ac,gree,h3,,False,gree ac error code h3
+20,ac,gree,f1,,False,gree ac f1 error
+20,ac,videocon,h6,,False,h6 error in videocon split ac
+20,ac,haier,f6,,False,haier ac f6 error code
+20,washing-machine,haier,fa,,False,haier washing machine fa error
+20,vfd,hitachi,vfd,,False,hitachi vfd error codes
+20,ac,lloyd,f1,,False,lloyd ac error code f1
+20,ac,lloyd,f7,,False,lloyd ac f7 error
+20,ac,lloyd,h6,,False,lloyd ac h6 error code
+20,ac,videocon,10,,False,videocon split ac error code 10
+20,ac,voltas,f0,,False,voltas inverter ac error code f0
+20,ac,whirlpool,e2,,False,whirlpool ac error code e2
+20,ac,haier,e1,,False,haier air conditioner e1 error
+20,washing-machine,ifb,e6,,False,ifb washing machine error code e6
+20,washing-machine,ifb,te,,False,te error code ifb washing machine
+20,induction,butterfly,e0,,False,butterfly induction stove e0 error
+20,induction,bajaj,e2,,False,e2 error in bajaj induction cooker
+20,induction,pigeon,e1,,False,pigeon induction stove e1 error
+20,induction,generic,skf,,False,skf induction heater tih 030m error codes
+20,induction,sunflame,e0,,False,sunflame induction cooker error code e0
+20,induction,philips,e5,,False,philips induction cooker e5 error
+20,ac,generic,cf,,False,cf error in ac
+20,ac,electrolux,f6,,False,electrolux ac f6 error
+20,ac,whirlpool,f2,,False,f2 error in whirlpool ac
+20,washing-machine,samsung,03,,False,03 error samsung washing machine
+20,washing-machine,generic,1e,,False,1e washing machine error
+20,washing-machine,samsung,4,,False,4 c error in samsung washing machine
+20,washing-machine,samsung,5,,False,5 e error on samsung washing machine
+20,washing-machine,samsung,6e,,False,6e samsung washing machines error
+20,washing-machine,samsung,6e2,,False,6e2 error on samsung washing machine
+20,washing-machine,generic,lo,,False,ac lo error in washing machine
+20,washing-machine,lg,be,,False,be error code lg washing machine
+20,washing-machine,bosch,e36,,False,bosch washing machine error code e36
+20,washing-machine,samsung,ce,,False,ce error samsung washing machine
+20,washing-machine,ifb,ch,,False,ch error in ifb washing machine
+20,washing-machine,ifb,cl,,False,cl error in ifb washing machine
+20,washing-machine,ifb,cp,,False,cp error in ifb washing machine
+20,washing-machine,whirlpool,dle,,False,dle error in whirlpool washing machine
+20,washing-machine,generic,dp,,False,dp error in washing machine
+20,washing-machine,ifb,04,,False,e 04 error in ifb washing machine
+20,washing-machine,generic,e01,,False,e01 washing machine error
+20,washing-machine,electrolux,e1,,False,e1 error in electrolux washing machine
+20,washing-machine,bosch,e19,,False,e19 error bosch washing machine
+20,washing-machine,godrej,e2,,False,e2 error in godrej washing machine
+20,washing-machine,whirlpool,e2,,False,e2 error in whirlpool washing machine
+20,washing-machine,godrej,e4,,False,e4 error in godrej washing machine
+20,washing-machine,ifb,e8,,False,e8 error in ifb washing machine
+20,washing-machine,generic,e9,,False,e9 error washing machine
+20,washing-machine,ifb,ep,,False,ep error in ifb washing machine
+20,washing-machine,generic,03,,False,error 03 washing machine
+20,washing-machine,ifb,9,,False,error 9 in ifb washing machine
+20,washing-machine,whirlpool,no,,False,error no 551 for whirlpool washing machine
+20,washing-machine,whirlpool,esc,,False,esc error in whirlpool washing machine
+20,washing-machine,whirlpool,f1,,False,f1 error in whirlpool washing machine
+20,washing-machine,ifb,f2,,False,f2 error in ifb washing machine
+20,washing-machine,whirlpool,f2,,False,f2 error in whirlpool washing machine
+20,washing-machine,bosch,f8,,False,f8 error in bosch washing machine
+20,washing-machine,lg,ff,,False,ff error in lg washing machine
+20,washing-machine,panasonic,h02,,False,h02 error panasonic washing machine
+20,washing-machine,generic,h1,,False,h1 error in washing machine
+20,washing-machine,haier,6,,False,haier washing machine error 6
+20,washing-machine,haier,7,,False,haier washing machine error 7
+20,washing-machine,hitachi,c3,,False,hitachi washing machine c3 error
+20,washing-machine,lg,i,,False,how do i fix error on my lg washing machine
+20,washing-machine,ifb,lap,,False,lap error in ifb washing machine
+20,washing-machine,lg,4e,,False,lg washing machine 4e error
+20,washing-machine,lg,6kg,,False,lg washing machine front load 6kg error code
+20,washing-machine,ifb,p01,,False,p01 error in ifb washing machine
+20,washing-machine,ifb,p07,,False,p07 error in ifb washing machine
+20,washing-machine,ifb,p09,,False,p09 error in ifb washing machine
+20,washing-machine,ifb,p14,,False,p14 error in ifb washing machine
+20,washing-machine,ifb,p5,,False,p5 error in ifb washing machine
+20,washing-machine,panasonic,h12,,False,panasonic washing machine error code h12
+20,washing-machine,samsung,te,,True,samsung washing machine te error
+20,washing-machine,generic,sf,,False,sf error in washing machine
+20,vfd,siemens,iq100,,False,siemens iq100 washing machine error codes
+20,vfd,siemens,iq500,,False,siemens iq500 washing machine error codes
+20,vfd,siemens,e16,,False,siemens washing machine e16 error
+20,vfd,siemens,18,,False,siemens washing machine error 18
+20,washing-machine,toshiba,e7,,False,toshiba washing machine e7 error
+20,washing-machine,ifb,trc,,False,trc error in ifb washing machine
+20,washing-machine,whirlpool,tsc,,False,tsc error in whirlpool washing machine
+20,washing-machine,ifb,ue,,False,ue error in ifb washing machine
+20,washing-machine,videocon,e3,,False,videocon washing machine e3 error
+20,washing-machine,whirlpool,650h,,False,whirlpool 650h washing machine pe error
+20,washing-machine,whirlpool,e4,,False,whirlpool washing machine e4 error
+20,washing-machine,bosch,e26,,False,bosch washing machine e26 error
+20,washing-machine,samsung,c4,,False,c4 error samsung washing machine
+20,washing-machine,samsung,d3,,False,d3 error samsung washing machine
+20,washing-machine,generic,e10,,False,e10 error in washing machine
+20,washing-machine,lg,ecl,,False,ecl error in lg washing machine
+20,washing-machine,lg,ee,,False,ee error code lg washing machine
+20,washing-machine,samsung,he1,,False,he1 error samsung washing machine
+20,washing-machine,panasonic,u11,,False,panasonic top load washing machine error code u11
+20,vfd,abb,550,,False,abb 550 vfd fault codes
+20,vfd,generic,m200,,False,emerson m200 vfd fault codes
+20,vfd,fuji,vfd,,False,fuji electric vfd fault codes
+20,vfd,mitsubishi,a700,,False,mitsubishi a700 vfd fault codes
+20,vfd,siemens,v20,,False,siemens v20 vfd fault codes
+20,vfd,toshiba,vfd,,False,toshiba vfd fault codes
+20,vfd,yaskawa,vfd,,False,yaskawa vfd fault codes
+20,ac,hitachi,9,,False,hitachi ac white light blinking 9 times
+20,ac,carrier,e6,,False,carrier ac e6 error
+20,ac,generic,f5,,False,f5 error in split ac
+20,ac,generic,p5,,False,p5 error code air conditioner
+20,ac,generic,po,,False,po error in ac
+20,ac,sansui,e6,,False,sansui ac e6 error
+20,ac,generic,sp,,False,sp pr error in ac
+20,ac,videocon,e3,,False,videocon ac e3 error
+20,ac,generic,ea,,False,ea error code air conditioner
+20,ac,generic,er,,False,er error code air conditioner
+20,ac,generic,i,,False,how do i fix e1 error on my air conditioner
+20,washing-machine,lg,you,,False,how do you fix fe error on lg washer
+20,ac,lg,qr,,False,lg ac qr code
+20,fridge,lg,5,,False,lg refrigerator 5 blinks on board
+20,fridge,lg,7,,False,lg refrigerator 7 blinks
+20,ac,toshiba,e04,,False,toshiba ac e04 fault code
+20,ac,ifb,e4,,False,e4 error in ifb ac
+20,washing-machine,lg,p1,,False,lg dishwasher p1 code
+20,washing-machine,lg,l2,,False,lg dishwasher error code l2
+20,fridge,samsung,25e,,False,samsung refrigerator error code 25e
+20,fridge,samsung,33,,False,samsung refrigerator error code 33 e
+20,ac,ifb,lo,,False,ac lo error in ifb
+20,ac,generic,aol,,False,aol error ac 3101
+20,ac,electrolux,e1,,False,electrolux ac e1 error
+20,ac,midea,e3,,False,midea ac error code e3
+20,inverter-ups,generic,9145,,False,eaton 9145 ups error codes
+10,microwave,samsung,i,,False,how do i fix my samsung microwave se error
+10,microwave,lg,f3,,False,lg microwave error code f3
+10,ac,daikin,l5,,False,daikin air conditioner error code l5
+10,vfd,mitsubishi,a800,,False,mitsubishi a800 vfd error codes
+10,vfd,mitsubishi,vfd,,False,mitsubishi vfd error codes
+10,ac,onida,red,,False,onida ac red light blinking
+10,ac,generic,i20,,False,elite i20 ac error codes
+10,ac,onida,p3,,False,onida ac p3 error code
+10,ac,carrier,fl,,False,carrier window ac error code fl
+10,ac,carrier,p1,,False,p1 error code air conditioner carrier
+10,ac,lg,ch26,,False,lg air conditioner error code ch 26
+10,ac,lg,ch50,,False,lg air conditioner error code ch 50
+10,ac,lg,ch51,,False,lg air conditioner error code ch 51
+10,fridge,lg,rf,,False,lg refrigerator error code rf
+10,ac,ogeneral,5,,False,o general inverter ac 1.5 ton error code
+10,ac,bluestar,c4,,False,c4 error in blue star ac
+10,ac,bluestar,c9,,False,c9 error in bluestar ac
+10,ac,voltas,pc,,False,voltas ac error code pc 04
+10,ac,generic,ac10m,,False,ac10m volt fault
+10,ro,generic,e1,,False,atlanta air purifier error code e1
+10,ac,carrier,h1,,False,carrier ductable ac error code h1
+10,ac,godrej,f2,,False,godrej ac f2 error
+10,ac,haier,dc,,False,haier dc inverter ac f1 error
+10,ac,hitachi,e8,,False,hitachi cassette ac error codes e8
+10,washing-machine,hitachi,f25,,False,hitachi washing machine error code f25
+10,ac,lloyd,l4,,False,lloyd ac l4 error code
+10,ac,lloyd,p7,,False,lloyd inverter ac error code p7
+10,ac,voltas,u8,,False,u8 error code voltas ac
+10,ac,voltas,p1,,False,voltas split ac error code p1
+10,washing-machine,ifb,err5,,False,ifb washing machine err5 error code
+10,induction,bajaj,e0,,False,bajaj induction cooker e0 error
+10,induction,bajaj,e9,,False,e9 error in bajaj induction cooker
+10,induction,electrolux,e9,,False,electrolux induction e9 error
+10,induction,generic,eo,,False,eo error induction cooker
+10,induction,pigeon,e3,,False,pigeon induction stove e3 error
+10,induction,prestige,e1,,False,prestige induction e1 error
+10,induction,prestige,dc,,False,prestige induction stove dc error
+10,vfd,siemens,hob,,False,siemens induction hob error codes
+10,washing-machine,whirlpool,e5,,False,whirlpool washing machine error code e5
+10,ac,carrier,f2,,False,carrier ac error code f2
+10,ac,generic,f0,,False,f0 error in ac
+10,washing-machine,generic,f2,,False,f2 error dishwasher
+10,ac,generic,fc,,False,fc error in ac
+10,washing-machine,samsung,2h,,False,2h error samsung washing machine
+10,washing-machine,ifb,5e,,False,5e error in ifb washing machine
+10,washing-machine,samsung,be,,False,be error in samsung washing machine
+10,washing-machine,bosch,7,,False,bosch maxx 7 washing machine f21 error code
+10,washing-machine,bosch,end,,False,bosch washing machine end error
+10,washing-machine,bosch,f21,,False,bosch washing machine error codes f21
+10,washing-machine,bosch,e2,,False,bosch washing machine error e2
+10,washing-machine,bosch,f19,,False,bosch washing machine f19 error
+10,washing-machine,hitachi,c9,,False,c9 error in hitachi washing machine
+10,washing-machine,ifb,ce,,False,ce error in ifb washing machine
+10,washing-machine,ifb,d0,,False,d0 error in ifb washing machine
+10,washing-machine,ifb,de,,False,de error in ifb washing machine
+10,washing-machine,generic,e0,,False,e0 error washing machine
+10,washing-machine,generic,e02,,False,e02 error washing machine
+10,washing-machine,bosch,e1,,False,e1 error in bosch washing machine
+10,washing-machine,panasonic,e10,,False,e10 error panasonic washing machine
+10,washing-machine,generic,e11,,False,e11 error code washing machine
+10,washing-machine,generic,e21,,False,e21 washing machine error
+10,washing-machine,whirlpool,e5c,,False,e5c error in whirlpool washing machine
+10,washing-machine,bosch,e83,,False,e83 error code bosch washing machine
+10,washing-machine,electrolux,e10,,False,electrolux washing machine error code e10
+10,washing-machine,haier,5,,False,error 5 haier washing machine
+10,washing-machine,generic,5,,False,error 5 washing machine
+10,washing-machine,samsung,h2,,False,h2 error samsung washing machine
+10,washing-machine,samsung,he,,False,he error samsung washing machine
+10,washing-machine,lg,if,,False,if error in lg washing machine
+10,washing-machine,ifb,5,,False,ifb washing machine error 5 times blinking
+10,washing-machine,generic,h20,,False,indesit washing machine h20 error code
+10,washing-machine,samsung,lc1,,False,lc1 error samsung washing machine
+10,washing-machine,lloyd,e2,,False,lloyd washing machine e2 error
+10,washing-machine,midea,e10,,False,midea washing machine e10 error code
+10,washing-machine,onida,f1,,False,onida washing machine f1 error
+10,washing-machine,ifb,p13,,False,p13 error in ifb washing machine
+10,washing-machine,lg,p3,,False,p3 error in lg washing machine
+10,washing-machine,samsung,7kg,,False,samsung diamond 7kg washing machine error codes
+10,washing-machine,samsung,3c,,False,samsung washing machine 3c error
+10,washing-machine,samsung,ddc,,False,samsung washing machine ddc error code
+10,washing-machine,samsung,e5,,False,samsung washing machine e5 error
+10,washing-machine,samsung,e6,,False,samsung washing machine e6 error
+10,washing-machine,samsung,ee,,False,samsung washing machine ee error
+10,washing-machine,samsung,no,,False,samsung washing machine not working no error code
+10,washing-machine,samsung,sub,,False,samsung washing machine sub error
+10,washing-machine,ifb,se,,False,se error in ifb washing machine
+10,washing-machine,lloyd,sf,,False,sf error in lloyd washing machine
+10,vfd,siemens,e23,,False,siemens washing machine error e23
+10,washing-machine,generic,sud,,False,sud error in washing machine
+10,washing-machine,toshiba,e6,,False,toshiba washing machine error code e6
+10,washing-machine,generic,ub,,False,ub error in washing machine
+10,washing-machine,voltas,e6,,False,voltas beko washing machine e6 error
+10,washing-machine,generic,e17,,False,washing machine e17 error
+10,vfd,lg,6,,False,lg direct drive 6 kg de error
+10,vfd,lg,7kg,,False,lg direct drive 7kg error codes
+10,ac,hitachi,5,,False,hitachi ac white light blinking 5 times
+10,ac,generic,ac1,,False,ac1 error code
+10,ac,generic,el,,False,el 01 ac error
+10,ac,carrier,e8,,False,carrier cassette ac error code e8
+10,ac,electrolux,e4,,False,electrolux ac error code e4
+10,ac,generic,6,,False,error 6 in air conditioner
+10,ac,gree,e1,,False,gree air conditioner error code e1
+10,fridge,lg,no,,False,lg fridge not cooling no error code
+10,ac,generic,p7,,False,p7 error air conditioner
+10,ac,tcl,e6,,False,tcl air conditioner error code e6
+10,fridge,samsung,22e,,False,how to fix samsung refrigerator error code 22e
+10,ac,ifb,h1,,False,ifb ac h1 error
+10,ac,whirlpool,f3,,False,whirlpool inverter ac f3 error code
+10,vfd,generic,up,,False,hard drive not found error on boot up
+10,ac,generic,up,,False,instagram account sign up error
+10,ac,generic,urn,,False,urn acme error dns dns problem nxdomain looking up a

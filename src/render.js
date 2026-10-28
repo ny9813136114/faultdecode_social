@@ -55,7 +55,9 @@ function mixAudio(script, audio, timings, total, dir, music) {
   script.scenes.forEach((sc, i) => {
     const { t0, dur } = timings[i];
     if (i > 0) cues.push({ f: sfx.whoosh, t: Math.max(t0 - 0.15, 0) });
-    if (sc.kind === 'safety') cues.push({ f: sfx.alarm, t: t0 + 0.05 });
+    if (sc.kind === 'safety' || sc.kind === 'alert') cues.push({ f: sfx.alarm, t: t0 + 0.05 });
+    if (sc.kind === 'countdown') [0, 1, 2].forEach((j) => cues.push({ f: sfx.beep, t: t0 + (j * dur) / 3 }));
+    if (sc.kind === 'reveal') cues.push({ f: sfx.pop, t: t0 + 0.2 });
     if (sc.kind === 'step') cues.push({ f: sfx.tick, t: t0 + Math.max(dur - 0.45, 0.55) });
     if (sc.kind === 'outro') cues.push({ f: sfx.pop, t: t0 + 1.2 });
   });
@@ -88,6 +90,7 @@ export async function renderVideo(script, theme, audio, dir, outFile, { music = 
   const done = new Promise((ok, fail) => enc.on('close', (code) => (code === 0 ? ok() : fail(new Error(`ffmpeg exited ${code}`)))));
   const frames = Math.ceil(total * FPS);
   for (let f = 0; f < frames; f++) {
+    if (process.env.FD_DEBUG && f % 150 === 0) console.log(`frame ${f}/${frames}`);
     await page.evaluate((t) => window.seek(t), f / FPS);
     const jpg = await page.screenshot({ type: 'jpeg', quality: 90 });
     if (!enc.stdin.write(jpg)) await new Promise((r) => enc.stdin.once('drain', r));

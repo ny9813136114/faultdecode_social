@@ -1,0 +1,69 @@
+# The content engine: every morning, make the next Short from the plan (src/plan.js)
+# and schedule it on YouTube for the evening. There is a review window until then:
+# delete it in YouTube Studio if something looks wrong, and the plan moves on anyway.
+# Run it by hand from the Actions tab too: "private" = test upload that stays private.
+name: Daily Short
+on:
+  schedule:
+    - cron: '30 3 * * *' # 09:00 IST
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Public at (IST, today), e.g. 18:00. "private" = test, "none" = render only'
+        required: false
+        default: '18:00'
+permissions:
+  contents: write
+concurrency: daily-short
+env:
+  GUIDES_URL: https://faultdecode.com/data/guides.json
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npm ci && npx playwright install --with-deps chromium
+      - run: pip install edge-tts
+      - name: Pick
+        id: pick
+        run: node bin/next.js --one --guides-url "$GUIDES_URL" | tee -a "$GITHUB_OUTPUT"
+      - name: Render
+        run: node bin/make-short.js "${{ steps.pick.outputs.id }}" --format "${{ steps.pick.outputs.format }}" --voice edge --guides-url "$GUIDES_URL"
+      - name: Upload to YouTube
+        if: inputs.publish != 'none'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+          AT: ${{ inputs.publish || '18:00' }}
+        run: |
+          if [ "$AT" = private ]; then WHEN=private; else WHEN="$(TZ=Asia/Kolkata date +%F) $AT"; fi
+          node bin/upload.js out/* "$WHEN" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Log it, so tomorrow's pick moves on
+        if: inputs.publish != 'none' && inputs.publish != 'private'
+        run: |
+          node bin/log.js out/*
+          git add data/published.json
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Published: ${{ steps.pick.outputs.id }} (${{ steps.pick.outputs.format }})"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: daily-short
+          path: |
+            out/*/short.mp4
+            out/*/*.txt
+            out/*/*.json
+          retention-days: 14
+      - name: Save to latest-short branch
+        run: |
+          mkdir /tmp/pub && cp -r out/*/short.mp4 out/*/*.txt out/*/*.json /tmp/pub/
+          cd /tmp/pub && git init -q -b latest-short
+          git add -A && git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Short: ${{ steps.pick.outputs.id }} (${{ steps.pick.outputs.format }})"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" latest-short

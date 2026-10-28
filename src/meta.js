@@ -8,11 +8,14 @@ export function buildMeta(c, script) {
   const name = `${c.brandName} ${c.applianceName} ${c.code}`;
   const hi = HINDI[c.appliance] || c.applianceName;
   // YouTube allows 100 characters; keep the code and "#shorts" whatever the meaning's length.
-  const head = `${name} Error Kya Hai?`;
+  const fmt = script.format || 'meaning';
+  const head = { meaning: `${name} Error Kya Hai?`, danger: `${name} Error Kya Hai? ⚠️`, quiz: `${name} Error Kya Hai? Quiz:`, story: `${name} Error Aaya? Ab Kya Karein |` }[fmt];
   const tail = ' | Hindi #shorts';
   let problem = c.glance.problem;
   const room = 100 - head.length - tail.length - 1;
   if (problem.length > room) problem = problem.slice(0, room - 1).replace(/\s+\S*$/, '') + '…';
+  // A quiz title must not give the answer away.
+  if (fmt === 'quiz') problem = 'A ya B?';
   const title = `${head} ${problem}${tail}`;
 
   const description = [
@@ -30,6 +33,7 @@ export function buildMeta(c, script) {
     ...c.sources.map((s) => `- ${s.title}: ${s.url}`),
     `Checked: ${c.checked}`,
     '',
+    ...(fmt === 'quiz' ? ['Quiz ka jawab sahi tha? Comment mein batayein.', ''] : []),
     'Apna error code comment mein likhiye, agla video usi pe.',
     '',
     [tagify(`${c.brandName}${c.applianceName}`), tagify(c.code), tagify(`${c.applianceName}error`), '#errorcode', '#shorts'].join(' '),

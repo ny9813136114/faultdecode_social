@@ -9,14 +9,20 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const font = (pkg, file) => pathToFileURL(join(root, 'node_modules/@fontsource', pkg, 'files', file)).href;
 const mark = `data:image/svg+xml;base64,${readFileSync(join(root, 'assets/favicon.svg')).toString('base64')}`;
 
-// Three looks, picked by the guide's seed, so a row of Shorts does not look stamped out.
-// Colours follow faultdecode.com (src/styles/site.css).
+// Looks. "studio" (black) and "paper" (light grey) are the main ones: calm, one idea per
+// screen, big type, soft motion, Apple keynote style. The first three are the older,
+// louder looks, kept for --theme. Colours follow faultdecode.com (src/styles/site.css).
 export const THEMES = {
   device: { bg: '#0b1310', blob1: '#0e4d4a', blob2: '#3a2a07', blob3: '#123d2a', card: 'rgba(20,29,25,.92)', line: '#2a3631', ink: '#e6eee9', muted: '#9aa8a0', accent: '#f4a81d', hi: '#ffffff', grid: 'rgba(157,255,182,.05)' },
   cream: { bg: '#fbf6ec', blob1: '#f9dfa6', blob2: '#cfe6df', blob3: '#ffe9c2', card: 'rgba(255,255,255,.94)', line: '#ece3d2', ink: '#1d2321', muted: '#5f6964', accent: '#0e4d4a', hi: '#0e4d4a', grid: 'rgba(14,77,74,.06)' },
   teal: { bg: '#0b3d3a', blob1: '#137a72', blob2: '#7a5208', blob3: '#0e5a55', card: 'rgba(10,52,49,.92)', line: '#1f7a74', ink: '#eef7f4', muted: '#bfe0d8', accent: '#f4a81d', hi: '#ffffff', grid: 'rgba(255,255,255,.05)' },
+  studio: { calm: true, bg: '#000000', blob1: '#1c1c1e', blob2: '#000', blob3: '#000', card: 'rgba(255,255,255,.07)', line: 'rgba(255,255,255,.14)', ink: '#f5f5f7', muted: '#86868b', accent: '#f4a81d', hi: '#f5f5f7', grid: 'transparent', grad: 'linear-gradient(180deg,#ffffff 20%,#a1a1a6)' },
+  paper: { calm: true, bg: '#f5f5f7', blob1: '#ffffff', blob2: '#f5f5f7', blob3: '#f5f5f7', card: 'rgba(255,255,255,.9)', line: 'rgba(0,0,0,.08)', ink: '#1d1d1f', muted: '#6e6e73', accent: '#0e4d4a', hi: '#1d1d1f', grid: 'transparent', grad: 'linear-gradient(180deg,#1d1d1f 30%,#515154)' },
 };
-export const themeFor = (seed) => Object.keys(THEMES)[seed % 3];
+export const themeFor = (seed) => ['studio', 'paper'][seed % 2];
+
+// One colour per format, so a viewer can tell the series apart at a glance.
+export const FORMAT_GLOW = { meaning: '#f4a81d', danger: '#ff453a', quiz: '#bf5af2', story: '#30d158' };
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]);
 
@@ -78,6 +84,9 @@ function machine(c) {
 const warnIcon = `<svg viewBox="0 0 100 90" class="warn"><path d="M50 4 L96 86 H4 Z" fill="#ff4d3d" stroke="#ffd5cd" stroke-width="4" stroke-linejoin="round"/><rect x="45" y="30" width="10" height="32" rx="4" fill="#fff"/><circle cx="50" cy="73" r="6" fill="#fff"/></svg>`;
 const tick = `<svg viewBox="0 0 60 60" class="tick"><circle cx="30" cy="30" r="27" fill="#4ade80"/><path d="M17 31 L26 40 L44 21" fill="none" stroke="#0b1310" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="tickpath"/></svg>`;
 
+// Quiz options A and B. With `right`, the answer is marked and the other is struck out.
+const options = (opts, right) => `<div class="opts">${opts.map((o, i) => `<div class="opt${right === undefined ? '' : i === right ? ' right' : ' wrong'}"><b>${'AB'[i]}</b><span>${esc(o)}</span></div>`).join('')}</div>`;
+
 function sceneHtml(scene, s, timing) {
   const c = s.guide;
   const { t0, dur } = timing;
@@ -91,6 +100,22 @@ function sceneHtml(scene, s, timing) {
     case 'meaning':
       return `<div class="sticker">MATLAB</div>
         <h1 class="problem rise">${esc(scene.caption)}</h1>
+        <div class="card hindi rise2">${k(scene.hindi)}</div>`;
+    case 'alert':
+      return `<div class="warnwrap">${warnIcon}</div>
+        <div class="slam">${esc(c.code)}</div>
+        <h1 class="cap big">${k(scene.caption)}</h1>`;
+    case 'quiz':
+      return `<div class="sticker">QUIZ</div>
+        <div class="slam small">${esc(c.code)}<span class="q">?</span></div>
+        <h1 class="cap">${k(scene.caption)}</h1>
+        ${options(scene.options)}`;
+    case 'countdown':
+      return `<div class="count" style="--cd:${(dur / 3).toFixed(2)}s"><span>3</span><span>2</span><span>1</span></div>
+        ${options(scene.options)}`;
+    case 'reveal':
+      return `<div class="sticker">JAWAB</div>
+        ${options(scene.options, scene.right)}
         <div class="card hindi rise2">${k(scene.hindi)}</div>`;
     case 'safety':
       return `<div class="warnwrap">${warnIcon}</div>
@@ -111,8 +136,10 @@ function sceneHtml(scene, s, timing) {
   throw new Error(`unknown scene ${scene.kind}`);
 }
 
-function css(t) {
+function css(t, glow) {
   return `
+@font-face { font-family: Inter; font-weight: 600; src: url(${font('inter', 'inter-latin-600-normal.woff2')}); }
+@font-face { font-family: Inter; font-weight: 800; src: url(${font('inter', 'inter-latin-800-normal.woff2')}); }
 @font-face { font-family: Archivo; font-weight: 800; src: url(${font('archivo', 'archivo-latin-800-normal.woff2')}); }
 @font-face { font-family: Archivo; font-weight: 900; src: url(${font('archivo', 'archivo-latin-900-normal.woff2')}); }
 @font-face { font-family: Plex; font-weight: 500; src: url(${font('ibm-plex-sans', 'ibm-plex-sans-latin-500-normal.woff2')}); }
@@ -196,7 +223,65 @@ h1.big { font-size: calc(118px * var(--k, 1)); color: #fff; }
 .cursor { color: #f4a81d; animation: blink .8s steps(1) infinite; }
 .comment { align-self: flex-end; font-family: Archivo; font-weight: 800; font-size: 50px; background: ${t.hi}; color: ${t.bg}; padding: 20px 34px; border-radius: 60px; }
 .arrow { display: inline-block; animation: nudge .6s ease-in-out infinite; }
-@keyframes nudge { 50% { transform: translateX(22px); } }`;
+@keyframes nudge { 50% { transform: translateX(22px); } }
+
+/* Quiz */
+.opts { display: flex; flex-direction: column; gap: 26px; }
+.opt { display: flex; align-items: center; gap: 30px; background: ${t.card}; border: 3px solid ${t.line}; border-radius: 34px; padding: 30px 36px; font-weight: 700; font-size: calc(54px * var(--k, 1)); line-height: 1.2; }
+.opt b { flex: none; width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font-family: Archivo; font-weight: 900; font-size: 54px; background: ${glow}; color: #fff; }
+.opt.right { border-color: #30d158; box-shadow: 0 0 0 6px rgba(48,209,88,.25); animation: pop .45s cubic-bezier(.2,1.6,.4,1) both; animation-delay: .2s; }
+.opt.right b { background: #30d158; }
+.opt.wrong { opacity: .35; text-decoration: line-through; }
+.opt.wrong b { background: ${t.muted}; }
+.count { position: relative; height: 420px; }
+.count span { position: absolute; inset: 0; display: grid; place-items: center; font-family: Archivo; font-weight: 900; font-size: 400px; color: ${glow}; opacity: 0; animation: countin var(--cd) ease-out both; }
+.count span:nth-child(2) { animation-delay: var(--cd); } .count span:nth-child(3) { animation-delay: calc(var(--cd) * 2); }
+@keyframes countin { 0% { transform: scale(1.8); opacity: 0; } 20% { transform: scale(1); opacity: 1; } 80% { opacity: 1; } 100% { transform: scale(.8); opacity: 0; } }
+.slam.small { font-size: 180px; }
+${t.calm ? calmCss(t, glow) : ''}`;
+}
+
+// The calm look: no grid or sparks, one soft glow, big tight type, blur-in motion
+// instead of bounces, small spaced labels instead of stickers.
+function calmCss(t, glow) {
+  const dark = t.bg === '#000000';
+  const smooth = 'cubic-bezier(.22,1,.36,1)';
+  return `
+body { font-family: Inter, Deva, sans-serif; }
+.grid, .spark, .b2, .b3 { display: none; }
+.b1 { width: 1500px; height: 1500px; left: -210px; top: 200px; opacity: ${dark ? '.55' : '.35'}; background: radial-gradient(circle, ${glow} 0%, transparent 60%); animation: breathe 9s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: translate(-80px,-60px) scale(.9); } to { transform: translate(80px,120px) scale(1.1); } }
+.top { font-family: Inter; font-weight: 600; font-size: 40px; color: ${t.muted}; letter-spacing: -.5px; }
+.top img { width: 56px; height: 56px; } .top b { color: ${t.hi}; font-weight: 600; }
+.progress { height: 8px; background: ${glow}; box-shadow: none; }
+.lcd { background: transparent; border: 2px solid ${t.line}; color: ${t.hi}; text-shadow: none; font-size: 54px; }
+h1 { font-family: Inter, Deva; font-weight: 800; letter-spacing: -4px; line-height: 1.02; background: ${t.grad}; -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 8px; }
+h1.big { color: transparent; }
+h1 .w.now { color: ${glow}; -webkit-text-fill-color: ${glow}; }
+.card { background: ${t.card}; border: 2px solid ${t.line}; border-radius: 48px; box-shadow: ${dark ? 'none' : '0 20px 60px rgba(0,0,0,.08)'}; }
+.hindi { font-family: Inter, Deva; font-weight: 700; color: ${t.ink}; }
+.w { opacity: .28; } .w.now { color: ${glow}; transform: none; }
+.pill, .sticker { align-self: flex-start; background: none; color: ${glow}; font-family: Inter; font-weight: 600; font-size: 42px; letter-spacing: 8px; text-transform: uppercase; padding: 0; border-radius: 0; transform: none; animation: blurin .9s ${smooth} both; }
+.sticker.red { background: none; color: #ff453a; }
+.slam { font-family: Inter; font-weight: 800; font-size: 300px; letter-spacing: -12px; color: transparent; background: ${t.grad}; -webkit-background-clip: text; background-clip: text; text-shadow: none; animation: zoomin 1.6s ${smooth} both; animation-delay: .1s; }
+.slam .q { color: ${glow}; -webkit-text-fill-color: ${glow}; text-shadow: none; animation: none; }
+.slam.small { font-size: 220px; }
+@keyframes zoomin { from { transform: scale(1.25); opacity: 0; filter: blur(30px); } to { transform: scale(1); opacity: 1; filter: none; } }
+@keyframes blurin { from { opacity: 0; filter: blur(24px); transform: translateY(30px); } to { opacity: 1; filter: none; transform: none; } }
+.pop, .pop2, .rise, .rise2, .warnwrap, .tickwrap { animation-name: blurin; animation-duration: .9s; animation-timing-function: ${smooth}; }
+.slidein { animation: blurin .9s ${smooth} both; animation-delay: .15s; }
+.shake { animation: none; }
+.machine { filter: ${dark ? 'drop-shadow(0 40px 80px rgba(0,0,0,.8))' : 'drop-shadow(0 30px 50px rgba(0,0,0,.12))'}; animation: blurin 1.2s ${smooth} both; }
+.stepnum { font-family: Inter; font-weight: 800; letter-spacing: -8px; animation: blurin .9s ${smooth} both; }
+.stepnum .n { color: ${glow}; text-shadow: none; } .stepnum .of { color: ${t.muted}; opacity: 1; }
+.dots i { height: 10px; background: ${t.line}; } .dots i.on { background: ${t.hi}; } .dots i.now { background: ${glow}; }
+.warn path { fill: #ff453a; stroke: none; }
+.comment { font-family: Inter; font-weight: 600; background: ${t.hi}; color: ${t.bg}; }
+.cursor { color: ${glow}; }
+.opt { border-width: 2px; font-family: Inter, Deva; font-weight: 600; }
+.opt b { font-family: Inter; }
+.count span { font-family: Inter; font-weight: 800; letter-spacing: -10px; }
+.danger { background: radial-gradient(circle at 50% 45%, transparent 45%, rgba(255,69,58,.35)); }`;
 }
 
 // timings: [{ t0, dur }] per scene, from the measured voice lines. total = video length.
@@ -209,7 +294,8 @@ export function stageHtml(script, theme, timings, total) {
   const scenes = script.scenes
     .map((sc, i) => `<section class="scene" data-t0="${timings[i].t0.toFixed(3)}" data-t1="${(timings[i].t0 + timings[i].dur).toFixed(3)}" data-kind="${sc.kind}">${sceneHtml(sc, script, timings[i])}</section>`)
     .join('');
-  return `<!doctype html><meta charset="utf-8"><style>${css(t)}</style>
+  const glow = t.calm ? FORMAT_GLOW[script.format] || t.accent : t.accent;
+  return `<!doctype html><meta charset="utf-8"><style>${css(t, glow)}</style>
 <body><div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid"></div>${sparks}<div class="danger"></div></div>
 <div class="progress"></div><div class="top"><img src="${mark}">Fault<b>Decode</b></div><div class="lcd">${esc(script.guide.code)}</div>
 ${scenes}
@@ -259,8 +345,8 @@ window.seek = (t) => {
     typer.textContent = typer.dataset.text.slice(0, n);
   }
   // The small display stays hidden on the hook (the big code is on screen there).
-  lcd.style.opacity = !cur || cur.dataset.kind === 'hook' ? '0' : '1';
-  danger.style.opacity = cur && cur.dataset.kind === 'safety' ? String(0.6 + 0.4 * Math.sin(t * 9)) : '0';
+  lcd.style.opacity = !cur || ['hook', 'alert', 'quiz'].includes(cur.dataset.kind) ? '0' : '1';
+  danger.style.opacity = cur && ['safety', 'alert'].includes(cur.dataset.kind) ? String(0.6 + 0.4 * Math.sin(t * 9)) : '0';
   document.querySelector('.progress').style.width = (Math.min(t / TOTAL, 1) * 1080) + 'px';
 };
 window.seek(0);

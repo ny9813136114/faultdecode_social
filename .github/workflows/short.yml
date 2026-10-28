@@ -8,11 +8,16 @@ on:
       guide:
         description: Guide id, e.g. ac/lg/ch38
         required: true
+      format:
+        description: Format (blank = best for this guide)
+        required: false
+        type: choice
+        options: ['', meaning, danger, quiz, story]
       theme:
         description: Look (blank = automatic)
         required: false
         type: choice
-        options: ['', device, cream, teal]
+        options: ['', studio, paper, device, cream, teal]
       upload:
         description: 'YouTube: blank = no upload, "now", "private" (test) or "YYYY-MM-DD HH:MM" IST'
         required: false
@@ -35,6 +40,7 @@ jobs:
         run: |
           node bin/make-short.js "${{ inputs.guide }}" --voice edge \
             --guides-url https://faultdecode.com/data/guides.json \
+            ${{ inputs.format && format('--format {0}', inputs.format) || '' }} \
             ${{ inputs.theme && format('--theme {0}', inputs.theme) || '' }}
       - name: Upload to YouTube
         if: inputs.upload != ''

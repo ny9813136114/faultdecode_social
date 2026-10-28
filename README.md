@@ -9,9 +9,22 @@ Turns one [FaultDecode](https://faultdecode.com) guide into a 25 to 40 second ve
   The fixed lines in `src/script.js` (hook, safety line, outro) only frame them and carry no facts.
 - Safety codes always get the "switch off, do not open it, call a technician" scene.
 - Steps are shown in order. If they do not fit in 40 s, the Short stops early and points to the full guide.
-- A person watches every Short before it goes up. Upload by hand, about one a day, until the
-  YouTube API app passes Google's audit (unaudited apps can only upload private videos).
-- Three looks (device, cream, teal) and two voices, picked per guide, so the channel does not look stamped out.
+- The daily Short is scheduled for the evening, so there is a review window: delete it in YouTube Studio
+  if something is wrong.
+- Two main looks (studio = black, paper = light; calm, big type, soft motion), one colour per format,
+  and two voices, picked per guide, so the channel does not look stamped out. The older loud looks
+  (device, cream, teal) stay available with `--theme`.
+
+## Content engine
+Every day at 09:00 IST the **Daily Short** workflow picks the next Short, renders it and schedules it public at 18:00 IST.
+- What: `src/plan.js`. The guide India searches most (`data/volumes.csv`, Semrush India), in the format it has not had yet.
+  A guide's best format first (`danger` for safety codes, else `meaning`), then `quiz`, then `story`, at lower priority.
+  Never the same brand two days running, never the same guide within 6 days.
+- Formats (`src/script.js`): **meaning** (what it means, then the steps), **danger** (safety codes: the warning first),
+  **quiz** (A or B; the wrong option is the real meaning of another code of the same appliance), **story**
+  (the machine was running and the code came up, then meaning and steps).
+- What is out: `data/published.json` (the workflow adds each upload). See the next two weeks: `node bin/next.js`.
+- New guides on faultdecode.com join the plan by themselves. Update `data/volumes.csv` when there is a new Semrush export.
 
 ## Make one on GitHub (no install)
 Actions > **Make a Short** > Run workflow > type `ac/lg/ch38`. Download the zip from the finished run:
@@ -23,7 +36,7 @@ Needs Node 22, ffmpeg and `pip install edge-tts`.
 npm ci && npx playwright install chromium
 node bin/make-short.js ac/lg/ch38 --guides-url https://faultdecode.com/data/guides.json
 ```
-Options: `--theme device|cream|teal`, `--voice edge|silent|dir`, `--voice-dir <folder>` (your own recordings,
+Options: `--format meaning|danger|quiz|story`, `--theme studio|paper|device|cream|teal`, `--voice edge|silent|dir`, `--voice-dir <folder>` (your own recordings,
 `scene-01.mp3`, `scene-02.mp3` ..., one per line in `out/<id>/script.json`), `--guides <folder of guide JSON>`.
 
 ## Voice
