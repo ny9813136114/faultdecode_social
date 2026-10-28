@@ -14,8 +14,8 @@ export function seedOf(id) {
 // Roughly how long the Hindi voice takes for a line (about 2.6 words a second).
 export const estimateSeconds = (text) => text.trim().split(/\s+/).length / 2.6 + 0.5;
 
-const MAX_SECONDS = 39;
-const HARD_MAX = 52; // the video adds about 0.8 s of lead-in and tail
+const MAX_SECONDS = 39; // the video adds about 0.8 s of lead-in and tail
+const HARD_MAX = 52; // only to fit the first step
 export const OUTRO = 'पूरी गाइड, हिंदी और इंग्लिश में, फॉल्ट डीकोड डॉट कॉम पर।';
 export const OUTRO_MORE = 'बाकी स्टेप्स और पूरी गाइड फॉल्ट डीकोड डॉट कॉम पर।';
 
