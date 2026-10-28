@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ready, upload } from '../src/youtube.js';
+import { fileVideo } from '../src/channel.js';
 
 const [dir, when = 'private'] = process.argv.slice(2);
 if (!dir) { console.error('Give the output folder, e.g. out/ac-lg-ch38'); process.exit(1); }
@@ -29,3 +30,7 @@ const r = await upload({
 });
 writeFileSync(join(dir, 'youtube.json'), JSON.stringify(r, null, 2) + '\n');
 console.log(`uploaded to ${r.channel}: https://youtube.com/shorts/${r.videoId} (${r.privacy}${r.publishAt ? `, public at ${r.publishAt}` : ''})`);
+
+// Into the playlists for its appliance and format.
+const sc = JSON.parse(read('script.json'));
+await fileVideo(r.videoId, sc.id.split('/')[0], sc.format || 'meaning');

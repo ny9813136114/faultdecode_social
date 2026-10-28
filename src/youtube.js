@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 const env = (k) => (process.env[k] || '').trim(); // pasted secrets may carry spaces
 export const ready = () => !!(env('YT_CLIENT_ID') && env('YT_CLIENT_SECRET') && env('YT_REFRESH_TOKEN'));
 
-async function token() {
+export async function token() {
   const res = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', body: new URLSearchParams({
     grant_type: 'refresh_token', refresh_token: env('YT_REFRESH_TOKEN'), client_id: env('YT_CLIENT_ID'), client_secret: env('YT_CLIENT_SECRET') }) });
   const j = await res.json();
@@ -15,7 +15,7 @@ async function token() {
 
 // Guard: never upload to another channel (the owner also runs Parachar and TaazaBhav).
 // YT_CHANNEL_ID pins it exactly; without it the channel title must contain "FaultDecode".
-async function checkChannel(tok) {
+export async function checkChannel(tok) {
   const res = await fetch('https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true', { headers: { Authorization: `Bearer ${tok}` } });
   const ch = ((await res.json()).items || [])[0];
   const ok = ch && (env('YT_CHANNEL_ID') ? ch.id === env('YT_CHANNEL_ID') : /fault\s*decode/i.test(ch.snippet.title));
