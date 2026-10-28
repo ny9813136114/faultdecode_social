@@ -30,3 +30,11 @@ Options: `--theme device|cream|teal`, `--voice edge|silent|dir`, `--voice-dir <f
 `edge` uses Microsoft Edge's free neural voices (hi-IN Swara and Madhur) through the unofficial edge-tts tool.
 Before the channel is monetised, switch to a voice with clear commercial terms (Azure Speech, which has a
 free tier with the same voices) or record your own with `--voice dir`.
+
+## Upload to YouTube from GitHub
+Add three repository secrets (Settings > Secrets and variables > Actions): `YT_CLIENT_ID`, `YT_CLIENT_SECRET`
+(the same Google OAuth client as parachar-social works) and `YT_REFRESH_TOKEN`, made while signed in as the
+**FaultDecode** channel. Optional repository variable `YT_CHANNEL_ID` pins the channel exactly; without it the
+upload refuses any channel whose name does not contain "FaultDecode".
+Then run **Make a Short** with `upload` = `now` (public in about 15 minutes), `private` (test) or `2026-10-29 19:30` (IST).
+The video goes up Private with a publish time, so YouTube makes it public at that time.

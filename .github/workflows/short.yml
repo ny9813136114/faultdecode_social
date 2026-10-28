@@ -13,6 +13,9 @@ on:
         required: false
         type: choice
         options: ['', device, cream, teal]
+      upload:
+        description: 'YouTube: blank = no upload, "now", "private" (test) or "YYYY-MM-DD HH:MM" IST'
+        required: false
 permissions:
   contents: write
 jobs:
@@ -33,6 +36,16 @@ jobs:
           node bin/make-short.js "${{ inputs.guide }}" --voice edge \
             --guides-url https://faultdecode.com/data/guides.json \
             ${{ inputs.theme && format('--theme {0}', inputs.theme) || '' }}
+      - name: Upload to YouTube
+        if: inputs.upload != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+          WHEN: ${{ inputs.upload }}
+        run: |
+          node bin/upload.js out/* "$WHEN" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Name the download
         id: name
         run: echo "slug=$(echo '${{ inputs.guide }}' | tr '/' '-' | tr 'A-Z' 'a-z')" >> "$GITHUB_OUTPUT"
@@ -48,7 +61,7 @@ jobs:
       # so it can be checked without signing in to download the zip.
       - name: Save to latest-short branch
         run: |
-          mkdir /tmp/pub && cp -r out/*/short.mp4 out/*/*.txt out/*/script.json /tmp/pub/
+          mkdir /tmp/pub && cp -r out/*/short.mp4 out/*/*.txt out/*/*.json /tmp/pub/
           cd /tmp/pub && git init -q -b latest-short
           git add -A && git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Short: ${{ inputs.guide }}"
           git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" latest-short
