@@ -1,0 +1,23 @@
+# Check uploaded Shorts: privacy (did YouTube make it public?), publish time, views.
+name: Video status
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: YouTube video ids, space separated
+        required: true
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IDS: ${{ inputs.ids }}
+        run: node bin/status.js $IDS | tee -a "$GITHUB_STEP_SUMMARY"

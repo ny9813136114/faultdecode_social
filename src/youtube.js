@@ -44,3 +44,10 @@ export async function upload({ file, title, description, tags, publishAt }) {
   if (!put.ok || !v.id) throw new Error(`upload: ${put.status} ${JSON.stringify(v).slice(0, 300)}`);
   return { videoId: v.id, channel: ch.snippet.title, privacy: v.status.privacyStatus, publishAt: v.status.publishAt || '' };
 }
+
+// Privacy and publish time of uploaded videos (to see whether YouTube kept them private).
+export async function status(ids) {
+  const tok = await token();
+  const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status,snippet,statistics&id=${ids.join(',')}`, { headers: { Authorization: `Bearer ${tok}` } });
+  return ((await res.json()).items || []).map((v) => ({ id: v.id, title: v.snippet.title, privacy: v.status.privacyStatus, publishAt: v.status.publishAt || '', uploadStatus: v.status.uploadStatus, rejection: v.status.rejectionReason || '', views: v.statistics?.viewCount }));
+}
