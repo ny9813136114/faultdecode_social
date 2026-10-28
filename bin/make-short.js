@@ -20,7 +20,16 @@ const guidesUrl = opt('guides-url', process.env.FD_GUIDES_URL);
 
 async function loadGuide() {
   if (guidesUrl) {
-    const all = await (await fetch(guidesUrl)).json();
+    // Live site first; if it is not up yet, the snapshot in data/ (copied from the site's guides).
+    let all;
+    try {
+      const res = await fetch(guidesUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      all = await res.json();
+    } catch (e) {
+      console.warn(`${guidesUrl} failed (${e.message}), using data/guides.json`);
+      all = JSON.parse(readFileSync(new URL('../data/guides.json', import.meta.url), 'utf8'));
+    }
     const g = all.find((x) => x.appliance === appliance && x.brand === brand && x.code.toLowerCase() === code);
     if (!g) throw new Error(`${id} not in ${guidesUrl}`);
     return g;
