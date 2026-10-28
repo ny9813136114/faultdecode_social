@@ -13,6 +13,8 @@ on:
         required: false
         type: choice
         options: ['', device, cream, teal]
+permissions:
+  contents: write
 jobs:
   short:
     runs-on: ubuntu-latest
@@ -42,3 +44,12 @@ jobs:
             out/*/*.txt
             out/*/script.json
           retention-days: 14
+      # Also keep the latest Short on the "latest-short" branch (one commit, replaced each run),
+      # so it can be checked without signing in to download the zip.
+      - name: Save to latest-short branch
+        run: |
+          mkdir /tmp/pub && cp -r out/*/short.mp4 out/*/*.txt out/*/script.json /tmp/pub/
+          cd /tmp/pub && git init -q -b latest-short
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Short: ${{ inputs.guide }}" --allow-empty
+          git add -A && git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Short: ${{ inputs.guide }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" latest-short
