@@ -14,7 +14,8 @@ export function seedOf(id) {
 // Roughly how long the Hindi voice takes for a line (about 2.6 words a second).
 export const estimateSeconds = (text) => text.trim().split(/\s+/).length / 2.6 + 0.5;
 
-const MAX_SECONDS = 39; // the video adds about 0.8 s of lead-in and tail
+const MAX_SECONDS = 39;
+const HARD_MAX = 52; // the video adds about 0.8 s of lead-in and tail
 export const OUTRO = 'पूरी गाइड, हिंदी और इंग्लिश में, फॉल्ट डीकोड डॉट कॉम पर।';
 export const OUTRO_MORE = 'बाकी स्टेप्स और पूरी गाइड फॉल्ट डीकोड डॉट कॉम पर।';
 
@@ -52,7 +53,8 @@ export function buildScript(c, secondsOf = estimateSeconds) {
   let shown = 0;
   for (const step of steps) {
     const need = secondsOf(step) + 0.35;
-    if (total + need > MAX_SECONDS) break;
+    // Always show the first step, even if that runs a little past MAX_SECONDS.
+    if (total + need > (shown === 0 ? HARD_MAX : MAX_SECONDS)) break;
     scenes.push({ kind: 'step', n: shown + 1, of: steps.length, say: step, hindi: step });
     total += need;
     shown++;

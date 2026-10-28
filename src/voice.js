@@ -18,7 +18,7 @@ export const duration = (file) =>
 export function speak(text, seed, cacheDir) {
   const voice = VOICES[seed % VOICES.length];
   const file = join(cacheDir, `tts-${createHash('sha1').update(voice + text).digest('hex').slice(0, 12)}.mp3`);
-  if (!existsSync(file)) execFileSync('edge-tts', ['--voice', voice, '--rate=+8%', '--text', text, '--write-media', file], { stdio: 'pipe' });
+  if (!existsSync(file)) execFileSync('edge-tts', ['--voice', voice, '--rate=+12%', '--text', text, '--write-media', file], { stdio: 'pipe' });
   return file;
 }
 

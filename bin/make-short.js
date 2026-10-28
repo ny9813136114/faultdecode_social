@@ -64,5 +64,5 @@ writeFileSync(join(out, 'title.txt'), meta.title + '\n');
 writeFileSync(join(out, 'description.txt'), meta.description + '\n');
 writeFileSync(join(out, 'tags.txt'), meta.tags.join(', ') + '\n');
 writeFileSync(join(out, 'script.json'), JSON.stringify({ id, theme, voice: mode, seconds: +secs.toFixed(1), scenes: script.scenes }, null, 2));
-const warn = secs < 25 || secs > 40 ? `  WARNING: ${secs.toFixed(1)}s is outside 25-40s` : '';
+const warn = secs < 25 || secs > 52 ? `  WARNING: ${secs.toFixed(1)}s is outside 25-52s` : '';
 console.log(`done: ${join(out, 'short.mp4')} (${secs.toFixed(1)}s)${warn}`);
