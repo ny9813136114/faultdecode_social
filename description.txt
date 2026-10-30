@@ -1,0 +1,19 @@
+Samsung Washing Machine 4C error ka matlab: Water not filling. Samsung Washing Machine pe 4C code aaye to kya karein, Hindi mein.
+
+4C का मतलब है मशीन के ड्रम में पानी ठीक से नहीं आ रहा। ज़्यादातर नल पूरा न खुलना, पाइप मुड़ना या जाली वाला फ़िल्टर भर जाना इसकी वजह होती है।
+
+4C means water is not entering the drum properly. The usual causes are a tap that is not fully open, a bent inlet hose, or a blocked mesh filter where the hose joins the machine. You can usually fix it yourself.
+
+Poori guide (steps, English + हिंदी): https://faultdecode.com/washing-machine/samsung/4c/
+Samsung ke saare error codes: https://faultdecode.com/washing-machine/samsung/
+
+Official source (brand ki apni site / manual):
+- Samsung support: 4C or 4E error: https://www.samsung.com/co/support/home-appliances/samsung-washing-machine-error-4c-or-4e/
+- Samsung India: fix 4C error in top load washing machine: https://www.samsung.com/in/support/home-appliances/how-to-fix-4c-error-code-in-top-load-washing-machine/
+Checked: 2026-10-24
+
+Quiz ka jawab sahi tha? Comment mein batayein.
+
+Apna error code comment mein likhiye, agla video usi pe.
+
+#SamsungWashingMachine #4C #WashingMachineerror #errorcode #shorts

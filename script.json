@@ -1,0 +1,51 @@
+{
+  "id": "washing-machine/samsung/4c",
+  "format": "quiz",
+  "wrong": "washing-machine/samsung/3e",
+  "theme": "studio",
+  "voice": "edge",
+  "seconds": 37.8,
+  "scenes": [
+    {
+      "kind": "quiz",
+      "say": "क्विज़ टाइम! Samsung Washing Machine पर 4C का मतलब क्या है? ऑप्शन A या ऑप्शन B?",
+      "caption": "4C ka matlab kya hai?",
+      "options": [
+        "Water not filling",
+        "Motor issue"
+      ]
+    },
+    {
+      "kind": "countdown",
+      "say": "सोचिए... तीन, दो, एक।",
+      "options": [
+        "Water not filling",
+        "Motor issue"
+      ]
+    },
+    {
+      "kind": "reveal",
+      "say": "सही जवाब है A। 4C का मतलब है मशीन के ड्रम में पानी ठीक से नहीं आ रहा। ज़्यादातर नल पूरा न खुलना, पाइप मुड़ना या जाली वाला फ़िल्टर भर जाना इसकी वजह होती है।",
+      "caption": "Water not filling",
+      "hindi": "4C का मतलब है मशीन के ड्रम में पानी ठीक से नहीं आ रहा। ज़्यादातर नल पूरा न खुलना, पाइप मुड़ना या जाली वाला फ़िल्टर भर जाना इसकी वजह होती है।",
+      "options": [
+        "Water not filling",
+        "Motor issue"
+      ],
+      "right": 0
+    },
+    {
+      "kind": "step",
+      "n": 1,
+      "of": 4,
+      "say": "नल पूरा खोलें।",
+      "hindi": "नल पूरा खोलें।"
+    },
+    {
+      "kind": "outro",
+      "say": "आपका जवाब सही था? कमेंट में बताइए। पूरी गाइड फॉल्ट डीकोड डॉट कॉम पर।",
+      "caption": "faultdecode.com/washing-machine/samsung/4c",
+      "more": 3
+    }
+  ]
+}
