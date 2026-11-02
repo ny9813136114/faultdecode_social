@@ -16,7 +16,11 @@ function publishAt(w) {
   const m = w.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}):(\d{2})$/);
   if (!m) throw new Error(`bad time "${w}": use now, private or YYYY-MM-DD HH:MM (IST)`);
   const t = new Date(`${m[1]}T${m[2]}:${m[3]}:00+05:30`);
-  if (t < Date.now() + 10 * 60e3) throw new Error(`${w} IST is in the past or too soon`);
+  // GitHub often starts the 09:00 run hours late. If the time has passed, go public in 15 minutes instead of failing.
+  if (t < Date.now() + 10 * 60e3) {
+    console.warn(`${w} IST is past or too soon: public in 15 minutes instead`);
+    return publishAt('now');
+  }
   return t.toISOString().replace(/\.\d+Z$/, 'Z');
 }
 
