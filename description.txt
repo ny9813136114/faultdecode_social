@@ -1,0 +1,19 @@
+LG Washing Machine PE error ka matlab: Water level sensor error. LG Washing Machine pe PE code aaye to kya karein, Hindi mein.
+
+PE का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा। कई बार मशीन दोबारा चालू करने से ठीक हो जाता है।
+
+PE is LG's pressure error: the water level sensor is not working properly. A restart often clears it. On top load models LG also links it to too much foam from extra detergent. If PE keeps coming back, the sensor needs a technician.
+
+Poori guide (steps, English + हिंदी): https://faultdecode.com/washing-machine/lg/pe/
+LG ke saare error codes: https://faultdecode.com/washing-machine/lg/
+
+Official source (brand ki apni site / manual):
+- LG support: washing machine error code list: https://www.lg.com/lk/support/product-help/CT30012668-20155069444652
+- LG Canada support: PE error code: https://www.lg.com/ca_en/support/product-support/troubleshoot/help-library/cs-CT52001644-20152946590173
+- LG support: top load washer LED blinking error codes: https://www.lg.com/us/support/help-library/lg-top-load-washer-led-blinking-error-codes--20154392606264
+- LG India: washing machine error codes explained: https://www.lg.com/in/magazine/lg-washing-machine-error-codes-explained/
+Checked: 2026-10-24
+
+Apna error code comment mein likhiye, agla video usi pe.
+
+#LGWashingMachine #PE #WashingMachineerror #errorcode #shorts

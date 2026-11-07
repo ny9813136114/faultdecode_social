@@ -1,0 +1,54 @@
+{
+  "id": "washing-machine/lg/pe",
+  "format": "meaning",
+  "wrong": null,
+  "theme": "paper",
+  "voice": "edge",
+  "seconds": 36.2,
+  "scenes": [
+    {
+      "kind": "hook",
+      "say": "LG Washing Machine पर PE दिख रहा है? चलिए समझते हैं।",
+      "caption": "LG Washing Machine pe PE aa raha hai?"
+    },
+    {
+      "kind": "meaning",
+      "say": "PE का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा। कई बार मशीन दोबारा चालू करने से ठीक हो जाता है।",
+      "caption": "Water level sensor error",
+      "hindi": "PE का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा। कई बार मशीन दोबारा चालू करने से ठीक हो जाता है।"
+    },
+    {
+      "kind": "step",
+      "n": 1,
+      "of": 4,
+      "say": "प्लग 10–15 सेकंड के लिए निकालें।",
+      "hindi": "प्लग 10–15 सेकंड के लिए निकालें।"
+    },
+    {
+      "kind": "step",
+      "n": 2,
+      "of": 4,
+      "say": "प्लग निकला हो तब START/PAUSE 5 सेकंड दबाएं।",
+      "hindi": "प्लग निकला हो तब START/PAUSE 5 सेकंड दबाएं।"
+    },
+    {
+      "kind": "step",
+      "n": 3,
+      "of": 4,
+      "say": "फिर चालू करें।",
+      "hindi": "फिर चालू करें।"
+    },
+    {
+      "kind": "step",
+      "n": 4,
+      "of": 4,
+      "say": "बार-बार आए तो LG सर्विस बुलाएं।",
+      "hindi": "बार-बार आए तो LG सर्विस बुलाएं।"
+    },
+    {
+      "kind": "outro",
+      "say": "पूरी गाइड, हिंदी और इंग्लिश में, फॉल्ट डीकोड डॉट कॉम पर।",
+      "caption": "faultdecode.com/washing-machine/lg/pe"
+    }
+  ]
+}
