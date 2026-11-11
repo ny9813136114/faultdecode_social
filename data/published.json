@@ -64,5 +64,11 @@
   "id": "washing-machine/lg/ue",
   "format": "quiz",
   "videoId": "30Ck73DwCmg"
+ },
+ {
+  "date": "2026-11-11",
+  "id": "washing-machine/bosch/e17",
+  "format": "meaning",
+  "videoId": "8Ys5-ebZumw"
  }
 ]
