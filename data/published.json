@@ -70,5 +70,11 @@
   "id": "washing-machine/bosch/e17",
   "format": "meaning",
   "videoId": "8Ys5-ebZumw"
+ },
+ {
+  "date": "2026-11-12",
+  "id": "washing-machine/lg/oe",
+  "format": "danger",
+  "videoId": "lACcDivwouA"
  }
 ]
