@@ -1,0 +1,18 @@
+Samsung Washing Machine 1E error ka matlab: Water level sensor error. Samsung Washing Machine pe 1E code aaye to kya karein, Hindi mein.
+
+1E या 1C का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा।
+
+Samsung says 1E or 1C is a water level sensor issue. Samsung UK says to switch off at the mains, wait 1 minute and start a new programme. Samsung US also checks for leaks and excess suds before requesting service.
+
+Poori guide (steps, English + हिंदी): https://faultdecode.com/washing-machine/samsung/1e/
+Samsung ke saare error codes: https://faultdecode.com/washing-machine/samsung/
+
+Official source (brand ki apni site / manual):
+- Samsung UK: what do the codes on my washing machine mean: https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/
+- Samsung Singapore: washing machine information codes: https://www.samsung.com/sg/support/home-appliances/check-out-the-information-codes-on-my-washing-machine/
+- Samsung US: washing machine error codes: https://www.samsung.com/us/support/troubleshoot/TSG10000997/
+Checked: 2026-10-24
+
+Apna error code comment mein likhiye, agla video usi pe.
+
+#SamsungWashingMachine #1E #WashingMachineerror #errorcode #shorts

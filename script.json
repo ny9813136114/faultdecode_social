@@ -1,0 +1,47 @@
+{
+  "id": "washing-machine/samsung/1e",
+  "format": "meaning",
+  "wrong": null,
+  "theme": "paper",
+  "voice": "edge",
+  "seconds": 34.4,
+  "scenes": [
+    {
+      "kind": "hook",
+      "say": "1E कोड का मतलब क्या है? Samsung Washing Machine वाले ध्यान दें।",
+      "caption": "1E ka matlab kya hai?"
+    },
+    {
+      "kind": "meaning",
+      "say": "1E या 1C का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा।",
+      "caption": "Water level sensor error",
+      "hindi": "1E या 1C का मतलब है पानी का लेवल बताने वाला सेंसर ठीक से काम नहीं कर रहा।"
+    },
+    {
+      "kind": "step",
+      "n": 1,
+      "of": 3,
+      "say": "मशीन मेन स्विच से बंद करें।",
+      "hindi": "मशीन मेन स्विच से बंद करें।"
+    },
+    {
+      "kind": "step",
+      "n": 2,
+      "of": 3,
+      "say": "1 मिनट रुकें, फिर चालू करके नया प्रोग्राम शुरू करें।",
+      "hindi": "1 मिनट रुकें, फिर चालू करके नया प्रोग्राम शुरू करें।"
+    },
+    {
+      "kind": "step",
+      "n": 3,
+      "of": 3,
+      "say": "लीक या ज़्यादा झाग तो नहीं, ये देखें। फिर भी आए तो Samsung सर्विस बुलाएं।",
+      "hindi": "लीक या ज़्यादा झाग तो नहीं, ये देखें। फिर भी आए तो Samsung सर्विस बुलाएं।"
+    },
+    {
+      "kind": "outro",
+      "say": "पूरी गाइड, हिंदी और इंग्लिश में, फॉल्ट डीकोड डॉट कॉम पर।",
+      "caption": "faultdecode.com/washing-machine/samsung/1e"
+    }
+  ]
+}
