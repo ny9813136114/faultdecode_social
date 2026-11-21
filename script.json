@@ -1,0 +1,51 @@
+{
+  "id": "washing-machine/lg/de",
+  "format": "quiz",
+  "wrong": "washing-machine/godrej/e4",
+  "theme": "paper",
+  "voice": "edge",
+  "seconds": 36.7,
+  "scenes": [
+    {
+      "kind": "quiz",
+      "say": "क्विज़ टाइम! LG Washing Machine पर dE का मतलब क्या है? ऑप्शन A या ऑप्शन B?",
+      "caption": "dE ka matlab kya hai?",
+      "options": [
+        "Load unbalance: clothes bunched to one side",
+        "Door or lid not locking"
+      ]
+    },
+    {
+      "kind": "countdown",
+      "say": "सोचिए... तीन, दो, एक।",
+      "options": [
+        "Load unbalance: clothes bunched to one side",
+        "Door or lid not locking"
+      ]
+    },
+    {
+      "kind": "reveal",
+      "say": "सही जवाब है B। dE का मतलब है दरवाज़ा या ढक्कन लॉक नहीं हो रहा। अक्सर कोई कपड़ा रबर में फंसा होता है या मशीन बहुत भरी होती है।",
+      "caption": "Door or lid not locking",
+      "hindi": "dE का मतलब है दरवाज़ा या ढक्कन लॉक नहीं हो रहा। अक्सर कोई कपड़ा रबर में फंसा होता है या मशीन बहुत भरी होती है।",
+      "options": [
+        "Load unbalance: clothes bunched to one side",
+        "Door or lid not locking"
+      ],
+      "right": 1
+    },
+    {
+      "kind": "step",
+      "n": 1,
+      "of": 4,
+      "say": "दरवाज़ा खोलें और देखें कोई कपड़ा रबर में फंसा न हो।",
+      "hindi": "दरवाज़ा खोलें और देखें कोई कपड़ा रबर में फंसा न हो।"
+    },
+    {
+      "kind": "outro",
+      "say": "आपका जवाब सही था? कमेंट में बताइए। पूरी गाइड फॉल्ट डीकोड डॉट कॉम पर।",
+      "caption": "faultdecode.com/washing-machine/lg/de",
+      "more": 3
+    }
+  ]
+}

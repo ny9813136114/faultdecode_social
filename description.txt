@@ -1,0 +1,20 @@
+LG Washing Machine dE error ka matlab: Door or lid not locking. LG Washing Machine pe dE code aaye to kya karein, Hindi mein.
+
+dE का मतलब है दरवाज़ा या ढक्कन लॉक नहीं हो रहा। अक्सर कोई कपड़ा रबर में फंसा होता है या मशीन बहुत भरी होती है।
+
+dE is LG's door error: the door or lid could not lock. dE1 means the door is not closed properly. dE2 means it is closed but not locked, often from overloading or a cloth caught in the door seal. LG says a reset usually clears it.
+
+Poori guide (steps, English + हिंदी): https://faultdecode.com/washing-machine/lg/de/
+LG ke saare error codes: https://faultdecode.com/washing-machine/lg/
+
+Official source (brand ki apni site / manual):
+- LG support: washing machine error code list: https://www.lg.com/lk/support/product-help/CT30012668-20155069444652
+- LG support: dE, dE1 and dE2 error codes, front load: https://www.lg.com/us/support/help-library/front-load-washer-what-are-de-de1-and-de2-error-codes--1400508168566
+- LG support: top load washer LED blinking error codes: https://www.lg.com/us/support/help-library/lg-top-load-washer-led-blinking-error-codes--20154392606264
+Checked: 2026-10-24
+
+Quiz ka jawab sahi tha? Comment mein batayein.
+
+Apna error code comment mein likhiye, agla video usi pe.
+
+#LGWashingMachine #dE #WashingMachineerror #errorcode #shorts
