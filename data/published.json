@@ -136,5 +136,11 @@
   "id": "washing-machine/lg/pe",
   "format": "quiz",
   "videoId": "LdwfX5M74BI"
+ },
+ {
+  "date": "2026-11-26",
+  "id": "ac/carrier/ec",
+  "format": "danger",
+  "videoId": "2jIYVgYF7ks"
  }
 ]
