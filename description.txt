@@ -1,0 +1,19 @@
+LG Washing Machine UE error ka matlab: Unbalanced load. LG Washing Machine pe UE code aaye to kya karein, Hindi mein.
+
+UE का मतलब है कपड़े एक तरफ़ जमा हो गए हैं, लोड बहुत कम या ज़्यादा है, या मशीन सीधी नहीं खड़ी।
+
+UE is LG's unbalanced load error. The clothes are bunched on one side, the load is too big or too small, or the machine is not level. Spread the clothes out, use the right course for bulky items and level the machine.
+
+Poori guide (steps, English + हिंदी): https://faultdecode.com/washing-machine/lg/ue/
+LG ke saare error codes: https://faultdecode.com/washing-machine/lg/
+
+Official source (brand ki apni site / manual):
+- LG support: washing machine error code list: https://www.lg.com/lk/support/product-help/CT30012668-20155069444652
+- LG support: UE imbalance error, front load: https://www.lg.com/us/support/help-library/lg-front-load-washing-machine-error-code-ue-imbalance-error-is-displayed-CT10000012-20154629490038
+- LG support: UE error, top load: https://www.lg.com/us/support/help-library/lg-top-load-washing-machine-error-code-a-ue-error-is-displayed--20155424864012
+- LG India: washing machine error codes explained: https://www.lg.com/in/magazine/lg-washing-machine-error-codes-explained/
+Checked: 2026-10-24
+
+Apna error code comment mein likhiye, agla video usi pe.
+
+#LGWashingMachine #UE #WashingMachineerror #errorcode #shorts
